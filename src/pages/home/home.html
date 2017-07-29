@@ -10,7 +10,9 @@
   <ion-grid>
     <ion-row>
       <ion-card>
-        <img src="../resources/banner-bg.jpg"/>
+        <h1>Haira & Rafael</h1>
+        <h2>Colabore com os nossos sonhos</h2>
+        <img src="../assets/img/banner-bg.jpg"/>
       </ion-card>
     </ion-row>
     <ion-row>
@@ -21,8 +23,69 @@
           </div>
           <ion-card-content>
             <ion-card-title>
+              Lua de Mel
+            </ion-card-title>
+            <p>
+              Descrição
+            </p>
+            <p>
+              Precisamos de você para realizar este sonho.
+            </p>
+
+            <ion-item>
+              <ion-range min="-200" max="200" [(ngModel)]="saturation" color="secondary">
+                <ion-label range-left>-R$ 0,00</ion-label>
+                <ion-label range-right>R$ 15.000,00</ion-label>
+              </ion-range>
+            </ion-item>
+
+            <ion-list>
+              <ion-item>
+                <ion-avatar item-start>
+                  <img src="assets/img/avatar1.jpg">
+                </ion-avatar>
+
+              </ion-item>
+              <ion-item>
+                <ion-avatar item-start>
+                  <img src="assets/img/avatar1.jpg">
+                </ion-avatar>
+
+              </ion-item>
+              <ion-item>
+                <ion-avatar item-start>
+                  <img src="assets/img/avatar1.jpg">
+                </ion-avatar>
+
+              </ion-item>
+              <ion-item>
+                <ion-avatar item-start>
+                  <img src="assets/img/avatar1.jpg">
+                </ion-avatar>
+
+              </ion-item>
+              <ion-item>
+                <ion-avatar item-start>
+                  <img src="assets/img/avatar1.jpg">
+                </ion-avatar>
+
+              </ion-item>
+            </ion-list>
+
+            <button ion-button rounded full>Colaborar um pouquinho</button>
+            <button ion-button rounded full clear>Pagar tudo</button>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col col-4>
+        <ion-card>
+          <div class="ui icon container" padding>
+            <ion-icon name="ios-archive"></ion-icon>
+          </div>
+          <ion-card-content>
+            <ion-card-title>
               Nine Inch Nails Live
-              </ion-card-title>
+            </ion-card-title>
             <p>
               The most popular industrial group ever, and largely
               responsible for bringing the music to a mass audience.
@@ -39,24 +102,7 @@
           <ion-card-content>
             <ion-card-title>
               Nine Inch Nails Live
-              </ion-card-title>
-            <p>
-              The most popular industrial group ever, and largely
-              responsible for bringing the music to a mass audience.
-            </p>
-            <button ion-button rounded full>Colaborar</button>
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-      <ion-col col-4>
-        <ion-card>
-          <div class="ui icon container" padding>
-            <ion-icon name="ios-archive"></ion-icon>
-          </div>
-          <ion-card-content>
-            <ion-card-title>
-              Nine Inch Nails Live
-              </ion-card-title>
+            </ion-card-title>
             <p>
               The most popular industrial group ever, and largely
               responsible for bringing the music to a mass audience.
