@@ -21,3 +21,65 @@
 
   font-size: 5em;
 }
+
+.logo {
+  background: url("../assets/img/logo.svg");
+  background-size: cover;
+  width: 218px;
+  height: 85px;
+  display: block;
+  margin: 10px auto;
+}
+
+.avatar {
+  ion-item {
+    display: inline-block;
+    width: initial;
+    min-height: 0;
+    padding-left: 0;
+
+    ion-avatar[item-start] {
+      margin: 0 5px 0;
+    }
+  }
+}
+
+.button-default {
+  padding: 15px;
+  background-color: #30d0fb;
+  background-image: linear-gradient(147deg, #30d0fb 0%, #8142f9 68%);
+  height: 5.6rem;
+  font-weight: bold;
+  transition: all .2s;
+
+  &:hover {
+   background-color: #30d0fb;
+   background-image: linear-gradient(147deg, #30d0fb 0%, #8142f9 0%);
+ }
+
+ .button-inner {
+  font-size: 18px;
+}
+}
+
+.button-clear {
+ height: 5.6rem;
+ color: #8142F9;
+}
+
+.button-full-md {
+  border-radius: 50px;
+}
+
+.card-md {
+  border-radius: 30px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.1);
+  border: 4px solid transparent;
+  padding: 20px;
+  transition: all .2s;
+
+  &:hover {
+    border-color: #8142F9;
+
+  }
+}
