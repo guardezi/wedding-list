@@ -1,3 +1,112 @@
 page-home {
+  header {
+    height: 350px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
 
+    .title {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 3;
+      padding: 35px;
+    }
+
+    h1, h2 {
+      color: white;
+      text-align: center;
+    }
+
+    h1 {
+      font-family: 'Mr De Haviland', cursive;
+      font-size: 150px;
+      margin: 10px 0 0;
+      opacity: 0.5;
+    }
+
+    h2 {
+      font-size: 35px;
+      display: block;
+      letter-spacing: 0.1em;
+      font-weight: 700;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      min-height: 100%;
+      position: absolute;
+      left: 0;
+      z-index: 1;
+    }
+
+    .color {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      background-color: #30d0fb;
+      background-image: linear-gradient(147deg, #30d0fb 0%, #8142f9 68%);
+      opacity: 0.7;
+    }
+  }
+
+  .avatar {
+    margin: 20px 0 0;
+    border-top: 1px solid #eee;
+    padding: 15px 0 0;
+
+    ion-item {
+      display: inline-block;
+      width: initial;
+      min-height: 0;
+      padding-left: 0;
+
+      .item-inner {
+        display: none;
+      }
+
+      ion-avatar[item-start] {
+        margin: 0 5px 0;
+        min-height: 30px;
+        min-width: 30px;
+        height: 30px;
+        width: 30px;
+
+        img {
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .range {
+    padding: 0;
+  }
+
+  .range-slider {
+
+    .range-knob-handle {
+      display: none;
+    }
+
+    .range-bar {
+      border-radius: 50px;
+      height: 20px;
+      background: white;
+      border: 1px solid #30d0fb;
+      top: 11px;
+
+      &.range-bar-active {
+        background: #30fbc1;
+      }
+    }
+  }
 }

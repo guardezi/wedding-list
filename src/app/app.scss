@@ -14,6 +14,9 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+ion-app.md {
+  font-family: 'Poppins', sans-serif;
+}
 
 .ui.icon.container {
   display: flex;
@@ -31,26 +34,15 @@
   margin: 10px auto;
 }
 
-.avatar {
-  ion-item {
-    display: inline-block;
-    width: initial;
-    min-height: 0;
-    padding-left: 0;
-
-    ion-avatar[item-start] {
-      margin: 0 5px 0;
-    }
-  }
-}
 
 .button-default {
   padding: 15px;
   background-color: #30d0fb;
   background-image: linear-gradient(147deg, #30d0fb 0%, #8142f9 68%);
   height: 5.6rem;
-  font-weight: bold;
+  font-weight: 700;
   transition: all .2s;
+  box-shadow: none;
 
   &:hover {
    background-color: #30d0fb;
@@ -58,7 +50,7 @@
  }
 
  .button-inner {
-  font-size: 18px;
+  font-size: 16px;
 }
 }
 
@@ -69,6 +61,7 @@
 
 .button-full-md {
   border-radius: 50px;
+  letter-spacing: 0.1em;
 }
 
 .card-md {
@@ -80,6 +73,13 @@
 
   &:hover {
     border-color: #8142F9;
+  }
 
+  h6 {
+    text-transform: uppercase;
+    color: #999;
+    letter-spacing: 0.1em;
+    margin-bottom: 15px;
+    font-size: 12px;
   }
 }
