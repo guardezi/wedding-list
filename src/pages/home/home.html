@@ -30,7 +30,6 @@
               <ion-card-title>
                 Lua de Mel
               </ion-card-title>
-              <strong>Descrição:</strong>
               <p> Precisamos de você para realizar este sonho.</p>
 
 
@@ -90,7 +89,6 @@
               <ion-card-title>
                 Lua de Mel
               </ion-card-title>
-              <strong>Descrição:</strong>
               <p> Precisamos de você para realizar este sonho.</p>
 
 
@@ -150,7 +148,6 @@
               <ion-card-title>
                 Lua de Mel
               </ion-card-title>
-              <strong>Descrição:</strong>
               <p> Precisamos de você para realizar este sonho.</p>
 
 
@@ -204,43 +201,179 @@
 
       </ion-row>
     </ion-grid>
-    <ul class="main-list">
-      <li class="item-list">
-        <div class="info-content">
-          <i class="icon-list">
-            <img src="https://semantic-ui.com/images/avatar2/small/molly.png" alt="">
-          </i>
-          <h4>Conjunto de panelas</h4>
-          <ion-range min="-200" max="200" [(ngModel)]="saturation" color="secondary">
-            <ion-label range-right>R$ 15.000,00</ion-label>
-          </ion-range>
-        </div>
-        <div class="options-content">
-          <ion-label stacked>Presentear com:</ion-label>
-          <ion-input class="main-input" placeholder="R$"></ion-input>
-          <button ion-button rounded full>Presentear</button>
-        </div>
-      </li>
-      <li class="item-list">
-        <div class="info-content">
-          <i class="icon-list">
-            <img src="https://semantic-ui.com/images/avatar2/small/molly.png" alt="">
-          </i>
-          <h4>Juliana Oliveira</h4>
-          <ion-range min="-200" max="200" [(ngModel)]="saturation" color="secondary">
-            <ion-label range-right>R$ 15.000,00</ion-label>
-          </ion-range>
-        </div>
-        <div class="options-content">
-          <ion-label stacked>Presentear com:</ion-label>
-          <ion-input class="main-input" placeholder="R$"></ion-input>
-          <button ion-button rounded full>Presentear</button>
-        </div>
-      </li>
-    </ul>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col col-4 col-sm>
+          <ion-card>
+            <ion-card-content>
+              <ion-card-title>
+                Conjunto de panelas
+              </ion-card-title>
+
+              <ion-list>
+                <ion-label stacked>Presentear com:</ion-label>
+                <ion-input class="main-input" placeholder="R$"></ion-input>
+              </ion-list>
+              <button ion-button rounded full (click)="selectGift()">Presentear</button>
+
+              <ion-list class="avatar">
+                <ion-range min="-200" max="200" [(ngModel)]="saturation" color="secondary">
+                  <ion-label range-right>R$ 15.000,00</ion-label>
+                </ion-range>
+                <h6>Já contribuiram</h6>
+                <ion-item>
+                  <ion-avatar item-start>
+                    <img src="assets/img/avatar1.jpg">
+                  </ion-avatar>
+
+                </ion-item>
+                <ion-item>
+                  <ion-avatar item-start>
+                    <img src="assets/img/avatar1.jpg">
+                  </ion-avatar>
+
+                </ion-item>
+                <ion-item>
+                  <ion-avatar item-start>
+                    <img src="assets/img/avatar1.jpg">
+                  </ion-avatar>
+
+                </ion-item>
+                <ion-item>
+                  <ion-avatar item-start>
+                    <img src="assets/img/avatar1.jpg">
+                  </ion-avatar>
+
+                </ion-item>
+                <ion-item>
+                  <ion-avatar item-start>
+                    <img src="assets/img/avatar1.jpg">
+                  </ion-avatar>
+
+                </ion-item>
+              </ion-list>
+
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-col col-4 col-sm>
+          <ion-card>
+
+            <ion-card-content>
+              <ion-card-title>
+                Lua de Mel
+              </ion-card-title>
+
+              <ion-list>
+                <ion-label stacked>Presentear com:</ion-label>
+                <ion-input class="main-input" placeholder="R$"></ion-input>
+              </ion-list>
+              <button ion-button rounded full (click)="openCheckout()">Presentear</button>
+
+
+              <ion-list class="avatar">
+                <ion-range min="-200" max="200" [(ngModel)]="saturation" color="secondary">
+                  <ion-label range-right>R$ 15.000,00</ion-label>
+                </ion-range>
+                <h6>Já contribuiram</h6>
+                <ion-item>
+                  <ion-avatar item-start>
+                    <img src="assets/img/avatar1.jpg">
+                  </ion-avatar>
+
+                </ion-item>
+                <ion-item>
+                  <ion-avatar item-start>
+                    <img src="assets/img/avatar1.jpg">
+                  </ion-avatar>
+
+                </ion-item>
+                <ion-item>
+                  <ion-avatar item-start>
+                    <img src="assets/img/avatar1.jpg">
+                  </ion-avatar>
+
+                </ion-item>
+                <ion-item>
+                  <ion-avatar item-start>
+                    <img src="assets/img/avatar1.jpg">
+                  </ion-avatar>
+
+                </ion-item>
+                <ion-item>
+                  <ion-avatar item-start>
+                    <img src="assets/img/avatar1.jpg">
+                  </ion-avatar>
+
+                </ion-item>
+              </ion-list>
+
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-col col-4 col-sm>
+          <ion-card>
+
+            <ion-card-content>
+              <ion-card-title>
+                Lua de Mel
+              </ion-card-title>
+
+              <ion-list>
+                <ion-label stacked>Presentear com:</ion-label>
+                <ion-input class="main-input" placeholder="R$"></ion-input>
+              </ion-list>
+              <button ion-button rounded full>Presentear</button>
+
+
+              <ion-list class="avatar">
+                <ion-range min="-200" max="200" [(ngModel)]="saturation" color="secondary">
+                  <ion-label range-right>R$ 15.000,00</ion-label>
+                </ion-range>
+                <h6>Já contribuiram</h6>
+                <ion-item>
+                  <ion-avatar item-start>
+                    <img src="assets/img/avatar1.jpg">
+                  </ion-avatar>
+
+                </ion-item>
+                <ion-item>
+                  <ion-avatar item-start>
+                    <img src="assets/img/avatar1.jpg">
+                  </ion-avatar>
+
+                </ion-item>
+                <ion-item>
+                  <ion-avatar item-start>
+                    <img src="assets/img/avatar1.jpg">
+                  </ion-avatar>
+
+                </ion-item>
+                <ion-item>
+                  <ion-avatar item-start>
+                    <img src="assets/img/avatar1.jpg">
+                  </ion-avatar>
+
+                </ion-item>
+                <ion-item>
+                  <ion-avatar item-start>
+                    <img src="assets/img/avatar1.jpg">
+                  </ion-avatar>
+
+                </ion-item>
+              </ion-list>
+
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+
+      </ion-row>
+    </ion-grid>
 
   </div>
   <footer class="footer" text-center>
-    chádepane.la - Todos os direitos reservados - São Paulo SP
+    chadepane.la - Todos os direitos reservados - São Paulo, SP
+    <img class="pagseguro" src="http://s3.amazonaws.com/img.iluria.com/user_layout_theme/2E004/paymentBanner.jpg?r=0.834133"/>
   </footer>
 </ion-content>
