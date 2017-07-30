@@ -83,7 +83,7 @@ ion-app.md {
   }
 }
 
-.card-md.highlight {
+.card-md {
   border-radius: $cardBorderRadius;
   box-shadow: 0 0 30px rgba(0,0,0,0.1);
   border: 4px solid transparent;
@@ -91,12 +91,13 @@ ion-app.md {
   transition: all .2s ease-in-out;
   display: inline-block;
 
-  .card-title {
-    color: $secondaryColor;
+  ion-label {
+    font-weight: bold;
+    color: #999;
   }
 
-  &:hover {
-    //box-shadow: 0 0 32px rgba(0,0,0,0.2);
+  .card-title {
+    font-size: 18px;
   }
 
   h6 {
@@ -106,6 +107,16 @@ ion-app.md {
     margin-bottom: 15px;
     font-size: 12px;
   }
+}
+
+.card-md.highlight {
+  border: 4px solid $secondaryColor;
+
+  .card-title {
+    color: $secondaryColor;
+    font-size: 24px;
+  }
+
 }
 
 .main-list {
