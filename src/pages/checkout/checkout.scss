@@ -24,13 +24,12 @@ page-checkout {
     display: inline-block;
   }
 
-  h1 {
+  .ui.message.checkout {
     border-radius: 20px;
-    font-size: 30px;
+    font-size: 2em;
     color: white;
     padding: 30px;
-    background-color: #30d0fb;
-    background-image: linear-gradient(147deg, #30d0fb 0%, #8142f9 68%);
+    background-color: $secondaryColor;
 
     strong {
       color: $primaryColor;
