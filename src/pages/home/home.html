@@ -22,68 +22,9 @@
     <ion-grid>
       <ion-row>
         <ion-col col-4 col-sm>
-          <ion-card>
-            <div class="ui icon container">
-              <ion-icon name="ios-cloudy-night-outline" color="primary"></ion-icon>
-            </div>
-            <ion-card-content>
-              <ion-card-title>
-                Lua de Mel
-              </ion-card-title>
-              <p>
-                Descrição
-              </p>
-              <p>
-                Precisamos de você para realizar este sonho.
-              </p>
-
-              <ion-range min="-200" max="200" [(ngModel)]="saturation" color="secondary">
-                <ion-label range-right>R$ 15.000,00</ion-label>
-              </ion-range>
-
-              <button ion-button rounded full>Colaborar</button>
-
-              <ion-list class="avatar">
-                <h6>Já contribuiram</h6>
-                <ion-item>
-                  <ion-avatar item-start>
-                    <img src="assets/img/avatar1.jpg">
-                  </ion-avatar>
-
-                </ion-item>
-                <ion-item>
-                  <ion-avatar item-start>
-                    <img src="assets/img/avatar1.jpg">
-                  </ion-avatar>
-
-                </ion-item>
-                <ion-item>
-                  <ion-avatar item-start>
-                    <img src="assets/img/avatar1.jpg">
-                  </ion-avatar>
-
-                </ion-item>
-                <ion-item>
-                  <ion-avatar item-start>
-                    <img src="assets/img/avatar1.jpg">
-                  </ion-avatar>
-
-                </ion-item>
-                <ion-item>
-                  <ion-avatar item-start>
-                    <img src="assets/img/avatar1.jpg">
-                  </ion-avatar>
-
-                </ion-item>
-              </ion-list>
-
-            </ion-card-content>
-          </ion-card>
-        </ion-col>
-        <ion-col col-4 col-sm>
-          <ion-card>
+          <ion-card class="highlight">
             <div class="ui icon container" padding>
-              <ion-icon name="ios-sunny" color="primary"></ion-icon>
+              <ion-icon name="ios-cloudy-night-outline" color="primary"></ion-icon>
             </div>
             <ion-card-content>
               <ion-card-title>
@@ -94,10 +35,10 @@
 
 
               <ion-list>
-                  <ion-label stacked>Colaborar com:</ion-label>
+                  <ion-label stacked>Presentear com:</ion-label>
                   <ion-input class="main-input" placeholder="R$"></ion-input>
               </ion-list>
-              <button ion-button rounded full>Colaborar</button>
+              <button ion-button rounded full>Presentear</button>
 
 
               <ion-list class="avatar">
@@ -141,28 +82,29 @@
           </ion-card>
         </ion-col>
         <ion-col col-4 col-sm>
-          <ion-card>
-            <div class="ui icon container">
-              <ion-icon name="ios-card" color="primary"></ion-icon>
+          <ion-card class="highlight">
+            <div class="ui icon container" padding>
+              <ion-icon name="ios-sunny" color="primary"></ion-icon>
             </div>
             <ion-card-content>
               <ion-card-title>
                 Lua de Mel
               </ion-card-title>
-              <p>
-                Descrição
-              </p>
-              <p>
-                Precisamos de você para realizar este sonho.
-              </p>
+                <strong>Descrição:</strong>
+              <p> Precisamos de você para realizar este sonho.</p>
 
-              <ion-range min="-200" max="200" [(ngModel)]="saturation" color="secondary">
-                <ion-label range-right>R$ 15.000,00</ion-label>
-              </ion-range>
 
-              <button ion-button rounded full>Colaborar</button>
+              <ion-list>
+                  <ion-label stacked>Presentear com:</ion-label>
+                  <ion-input class="main-input" placeholder="R$"></ion-input>
+              </ion-list>
+              <button ion-button rounded full>Presentear</button>
+
 
               <ion-list class="avatar">
+                <ion-range min="-200" max="200" [(ngModel)]="saturation" color="secondary">
+                  <ion-label range-right>R$ 15.000,00</ion-label>
+                </ion-range>
                 <h6>Já contribuiram</h6>
                 <ion-item>
                   <ion-avatar item-start>
@@ -200,28 +142,29 @@
           </ion-card>
         </ion-col>
         <ion-col col-4 col-sm>
-          <ion-card>
-            <div class="ui icon container">
-              <ion-icon name="ios-archive"></ion-icon>
+          <ion-card class="highlight">
+            <div class="ui icon container" padding>
+              <ion-icon name="ios-card" color="primary"></ion-icon>
             </div>
             <ion-card-content>
               <ion-card-title>
                 Lua de Mel
               </ion-card-title>
-              <p>
-                Descrição
-              </p>
-              <p>
-                Precisamos de você para realizar este sonho.
-              </p>
+                <strong>Descrição:</strong>
+              <p> Precisamos de você para realizar este sonho.</p>
 
-              <ion-range min="-200" max="200" [(ngModel)]="saturation" color="secondary">
-                <ion-label range-right>R$ 15.000,00</ion-label>
-              </ion-range>
 
-              <button ion-button rounded full>Colaborar</button>
+              <ion-list>
+                  <ion-label stacked>Presentear com:</ion-label>
+                  <ion-input class="main-input" placeholder="R$"></ion-input>
+              </ion-list>
+              <button ion-button rounded full>Presentear</button>
+
 
               <ion-list class="avatar">
+                <ion-range min="-200" max="200" [(ngModel)]="saturation" color="secondary">
+                  <ion-label range-right>R$ 15.000,00</ion-label>
+                </ion-range>
                 <h6>Já contribuiram</h6>
                 <ion-item>
                   <ion-avatar item-start>
@@ -261,7 +204,43 @@
 
       </ion-row>
     </ion-grid>
-
+    <ul class="main-list">
+      <li class="item-list">
+        <div class="info-content">
+          <i class="icon-list">
+            <img src="https://semantic-ui.com/images/avatar2/small/molly.png" alt="">
+          </i>
+          <h4>Conjunto de panelas</h4>
+          <ion-range min="-200" max="200" [(ngModel)]="saturation" color="secondary">
+            <ion-label range-right>R$ 15.000,00</ion-label>
+          </ion-range>
+        </div>
+        <div class="options-content">
+          <ion-label stacked>Presentear com:</ion-label>
+          <ion-input class="main-input" placeholder="R$"></ion-input>
+            <button ion-button rounded full>Presentear</button>
+        </div>
+      </li>
+      <li class="item-list">
+        <div class="info-content">
+          <i class="icon-list">
+            <img src="https://semantic-ui.com/images/avatar2/small/molly.png" alt="">
+          </i>
+          <h4>Juliana Oliveira</h4>
+          <ion-range min="-200" max="200" [(ngModel)]="saturation" color="secondary">
+            <ion-label range-right>R$ 15.000,00</ion-label>
+          </ion-range>
+        </div>
+        <div class="options-content">
+          <ion-label stacked>Presentear com:</ion-label>
+          <ion-input class="main-input" placeholder="R$"></ion-input>
+            <button ion-button rounded full>Presentear</button>
+        </div>
+      </li>
+    </ul>
 
   </div>
+  <footer class="footer" text-center>
+    chádepane.la - Todos os direitos reservados - São Paulo SP
+  </footer>
 </ion-content>

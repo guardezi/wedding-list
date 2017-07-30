@@ -22,7 +22,7 @@ $cardBorderRadius: 22px;
 
 
 .ui.container {
-  max-width: 1000px;
+  max-width: 980px;
   margin: 0 auto;
 }
 
@@ -51,6 +51,10 @@ ion-app.md {
   box-shadow: none;
   background-color: $primaryColor;
   background-image: linear-gradient(147deg, $primaryColor 0%, $secondaryColor 68%);
+
+  &:hover {
+    background-image: linear-gradient(147deg, $primaryColor 100%, $secondaryColor 0%);;
+  }
 }
 
 .button-inner {
@@ -79,11 +83,11 @@ ion-app.md {
   }
 }
 
-.card-md {
+.card-md.highlight {
   border-radius: $cardBorderRadius;
   box-shadow: 0 0 30px rgba(0,0,0,0.1);
   border: 4px solid transparent;
-  padding: 20px;
+  padding: $rootSize / 2;
   transition: all .2s ease-in-out;
   display: inline-block;
 
@@ -92,7 +96,7 @@ ion-app.md {
   }
 
   &:hover {
-    box-shadow: 0 0 32px rgba(0,0,0,0.2);
+    //box-shadow: 0 0 32px rgba(0,0,0,0.2);
   }
 
   h6 {
@@ -101,5 +105,23 @@ ion-app.md {
     letter-spacing: 0.1em;
     margin-bottom: 15px;
     font-size: 12px;
+  }
+}
+
+.main-list {
+  .range {
+      width: 65%;
+  }
+
+  .options-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+      .button {
+        width: 35%;
+        margin-left: $rootSize * 2;
+        padding: 26px;
+      }
   }
 }
