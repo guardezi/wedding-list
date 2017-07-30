@@ -24,3 +24,16 @@ $ ionic cordova run ios
 
 Substitute ios for android if not on a Mac.
 
+
+
+### DEPLOY to chadepane.la
+## BUILD
+```
+npm run ionic:build --prod
+```
+
+## deploy
+```
+aws s3 sync . s3://chadepane.la
+```
+
