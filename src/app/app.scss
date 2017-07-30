@@ -14,6 +14,18 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+$primaryColor: #30d0fb;
+$secondaryColor: #8142f9;
+$rootSize: 8px;
+$cardBorderRadius: 22px;
+
+
+.ui.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
 ion-app.md {
   font-family: 'Poppins', sans-serif;
 }
@@ -21,42 +33,37 @@ ion-app.md {
 .ui.icon.container {
   display: flex;
   justify-content: center;
-
-  font-size: 5em;
+  font-size: 3.5em;
 }
 
 .logo {
   background: url("../assets/img/logo.svg");
   background-size: cover;
-  width: 218px;
-  height: 85px;
+  width: $rootSize * 25;
+  height: $rootSize * 6;
   display: block;
-  margin: 10px auto;
+  margin: $rootSize auto;
 }
-
 
 .button-default {
-  padding: 15px;
-  background-color: #30d0fb;
-  background-image: linear-gradient(147deg, #30d0fb 0%, #8142f9 68%);
-  height: 5.6rem;
+  padding: $rootSize * 2;
   font-weight: 700;
-  transition: all .2s;
   box-shadow: none;
+  background-color: $primaryColor;
+  background-image: linear-gradient(147deg, $primaryColor 0%, $secondaryColor 68%);
+}
 
-  &:hover {
-   background-color: #30d0fb;
-   background-image: linear-gradient(147deg, #30d0fb 0%, #8142f9 0%);
- }
-
- .button-inner {
+.button-inner {
   font-size: 16px;
 }
+
+.button-effect {
+  transition: all 1s ease-in-out;
 }
 
 .button-clear {
  height: 5.6rem;
- color: #8142F9;
+ color: $secondaryColor;
 }
 
 .button-full-md {
@@ -64,15 +71,28 @@ ion-app.md {
   letter-spacing: 0.1em;
 }
 
+.col[col-4] {
+  @media screen and (max-width: 959px) {
+    width: 100%;
+    min-width: 100%;
+    box-sizing: border-box;
+  }
+}
+
 .card-md {
-  border-radius: 30px;
+  border-radius: $cardBorderRadius;
   box-shadow: 0 0 30px rgba(0,0,0,0.1);
   border: 4px solid transparent;
   padding: 20px;
-  transition: all .2s;
+  transition: all .2s ease-in-out;
+  display: inline-block;
+
+  .card-title {
+    color: $secondaryColor;
+  }
 
   &:hover {
-    border-color: #8142F9;
+    box-shadow: 0 0 32px rgba(0,0,0,0.2);
   }
 
   h6 {
