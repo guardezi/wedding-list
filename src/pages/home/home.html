@@ -19,196 +19,52 @@
     <img src="../assets/img/cover.jpg"/>
   </header>
   <div class="ui container">
-    <ion-grid>
-      <ion-row>
-        <ion-col col-4 col-sm>
+    <ion-grid hideWhen="!couple && !couple.main_dreams.length">
+      <ion-row >
+        <ion-col col-4 col-sm *ngFor="let dream of couple.main_dreams">
           <ion-card class="highlight">
             <div class="ui icon container" padding>
               <ion-icon name="ios-cloudy-night-outline" color="primary"></ion-icon>
             </div>
             <ion-card-content>
               <ion-card-title>
-                Lua de Mel
+                {{dream.title}}
               </ion-card-title>
-              <p> Precisamos de você para realizar este sonho.</p>
-
+              <p> {{dream.desciption}}</p>
 
               <ion-list>
                 <ion-label stacked>Presentear com:</ion-label>
                 <ion-input class="main-input" placeholder="R$"></ion-input>
               </ion-list>
+
               <button ion-button rounded full (click)="selectGift()">Presentear</button>
-
-
               <ion-list class="avatar">
-                <ion-range min="-200" max="200" [(ngModel)]="saturation" color="secondary">
-                  <ion-label range-right>R$ 15.000,00</ion-label>
+                <ion-range min="0" max="{{dream.price}}" [(ngModel)]="dream.received" readonly disabled color="secondary">
+                  <ion-label range-right>R$ {{dream.price}}</ion-label>
                 </ion-range>
-                <h6>Já contribuiram</h6>
-                <ion-item>
-                  <ion-avatar item-start>
-                    <img src="assets/img/avatar1.jpg">
-                  </ion-avatar>
+                <div *ngIf="dream && dream.contribers">
+                  <h6>Já contribuiram</h6>
+                  <ion-item  *ngFor="let c of dream.contribers">
+                    <ion-avatar item-start >
+                      <img src="{{c.photo}}">
+                    </ion-avatar>
 
-                </ion-item>
-                <ion-item>
-                  <ion-avatar item-start>
-                    <img src="assets/img/avatar1.jpg">
-                  </ion-avatar>
-
-                </ion-item>
-                <ion-item>
-                  <ion-avatar item-start>
-                    <img src="assets/img/avatar1.jpg">
-                  </ion-avatar>
-
-                </ion-item>
-                <ion-item>
-                  <ion-avatar item-start>
-                    <img src="assets/img/avatar1.jpg">
-                  </ion-avatar>
-
-                </ion-item>
-                <ion-item>
-                  <ion-avatar item-start>
-                    <img src="assets/img/avatar1.jpg">
-                  </ion-avatar>
-
-                </ion-item>
+                  </ion-item>
+                </div>
               </ion-list>
-
             </ion-card-content>
           </ion-card>
         </ion-col>
-        <ion-col col-4 col-sm>
-          <ion-card class="highlight">
-            <div class="ui icon container" padding>
-              <ion-icon name="ios-sunny" color="primary"></ion-icon>
-            </div>
-            <ion-card-content>
-              <ion-card-title>
-                Lua de Mel
-              </ion-card-title>
-              <p> Precisamos de você para realizar este sonho.</p>
-
-
-              <ion-list>
-                <ion-label stacked>Presentear com:</ion-label>
-                <ion-input class="main-input" placeholder="R$"></ion-input>
-              </ion-list>
-              <button ion-button rounded full (click)="openCheckout()">Presentear</button>
-
-
-              <ion-list class="avatar">
-                <ion-range min="-200" max="200" [(ngModel)]="saturation" color="secondary">
-                  <ion-label range-right>R$ 15.000,00</ion-label>
-                </ion-range>
-                <h6>Já contribuiram</h6>
-                <ion-item>
-                  <ion-avatar item-start>
-                    <img src="assets/img/avatar1.jpg">
-                  </ion-avatar>
-
-                </ion-item>
-                <ion-item>
-                  <ion-avatar item-start>
-                    <img src="assets/img/avatar1.jpg">
-                  </ion-avatar>
-
-                </ion-item>
-                <ion-item>
-                  <ion-avatar item-start>
-                    <img src="assets/img/avatar1.jpg">
-                  </ion-avatar>
-
-                </ion-item>
-                <ion-item>
-                  <ion-avatar item-start>
-                    <img src="assets/img/avatar1.jpg">
-                  </ion-avatar>
-
-                </ion-item>
-                <ion-item>
-                  <ion-avatar item-start>
-                    <img src="assets/img/avatar1.jpg">
-                  </ion-avatar>
-
-                </ion-item>
-              </ion-list>
-
-            </ion-card-content>
-          </ion-card>
-        </ion-col>
-        <ion-col col-4 col-sm>
-          <ion-card class="highlight">
-            <div class="ui icon container" padding>
-              <ion-icon name="ios-card" color="primary"></ion-icon>
-            </div>
-            <ion-card-content>
-              <ion-card-title>
-                Lua de Mel
-              </ion-card-title>
-              <p> Precisamos de você para realizar este sonho.</p>
-
-
-              <ion-list>
-                <ion-label stacked>Presentear com:</ion-label>
-                <ion-input class="main-input" placeholder="R$"></ion-input>
-              </ion-list>
-              <button ion-button rounded full>Presentear</button>
-
-
-              <ion-list class="avatar">
-                <ion-range min="-200" max="200" [(ngModel)]="saturation" color="secondary">
-                  <ion-label range-right>R$ 15.000,00</ion-label>
-                </ion-range>
-                <h6>Já contribuiram</h6>
-                <ion-item>
-                  <ion-avatar item-start>
-                    <img src="assets/img/avatar1.jpg">
-                  </ion-avatar>
-
-                </ion-item>
-                <ion-item>
-                  <ion-avatar item-start>
-                    <img src="assets/img/avatar1.jpg">
-                  </ion-avatar>
-
-                </ion-item>
-                <ion-item>
-                  <ion-avatar item-start>
-                    <img src="assets/img/avatar1.jpg">
-                  </ion-avatar>
-
-                </ion-item>
-                <ion-item>
-                  <ion-avatar item-start>
-                    <img src="assets/img/avatar1.jpg">
-                  </ion-avatar>
-
-                </ion-item>
-                <ion-item>
-                  <ion-avatar item-start>
-                    <img src="assets/img/avatar1.jpg">
-                  </ion-avatar>
-
-                </ion-item>
-              </ion-list>
-
-            </ion-card-content>
-          </ion-card>
-        </ion-col>
-
       </ion-row>
     </ion-grid>
 
-    <ion-grid>
+    <ion-grid hideWhen="!couple && !couple.secondary_dreams.length">
       <ion-row>
-        <ion-col col-4 col-sm>
+        <ion-col col-4 col-sm *ngFor="let dream of couple.secondary_dreams">
           <ion-card>
             <ion-card-content>
               <ion-card-title>
-                Conjunto de panelas
+                {{dream.title}}
               </ion-card-title>
 
               <ion-list>
@@ -218,156 +74,21 @@
               <button ion-button rounded full (click)="selectGift()">Presentear</button>
 
               <ion-list class="avatar">
-                <ion-range min="-200" max="200" [(ngModel)]="saturation" color="secondary">
-                  <ion-label range-right>R$ 15.000,00</ion-label>
+                <ion-range min="0" max="{{dream.price}}" [(ngModel)]="dream.received" readonly disabled color="secondary">
+                  <ion-label range-right>R$ {{dream.price}}</ion-label>
                 </ion-range>
-                <h6>Já contribuiram</h6>
-                <ion-item>
-                  <ion-avatar item-start>
-                    <img src="assets/img/avatar1.jpg">
-                  </ion-avatar>
-
-                </ion-item>
-                <ion-item>
-                  <ion-avatar item-start>
-                    <img src="assets/img/avatar1.jpg">
-                  </ion-avatar>
-
-                </ion-item>
-                <ion-item>
-                  <ion-avatar item-start>
-                    <img src="assets/img/avatar1.jpg">
-                  </ion-avatar>
-
-                </ion-item>
-                <ion-item>
-                  <ion-avatar item-start>
-                    <img src="assets/img/avatar1.jpg">
-                  </ion-avatar>
-
-                </ion-item>
-                <ion-item>
-                  <ion-avatar item-start>
-                    <img src="assets/img/avatar1.jpg">
-                  </ion-avatar>
-
-                </ion-item>
+                <div *ngIf="dream && dream.contribers && dream.contribers.length">
+                  <h6>Já contribuiram</h6>
+                  <ion-item  *ngFor="let c of dream.contribers">
+                    <ion-avatar item-start >
+                      <img src="{{c.photo}}">
+                    </ion-avatar>
+                  </ion-item>
+                </div>
               </ion-list>
-
             </ion-card-content>
           </ion-card>
         </ion-col>
-        <ion-col col-4 col-sm>
-          <ion-card>
-
-            <ion-card-content>
-              <ion-card-title>
-                Lua de Mel
-              </ion-card-title>
-
-              <ion-list>
-                <ion-label stacked>Presentear com:</ion-label>
-                <ion-input class="main-input" placeholder="R$"></ion-input>
-              </ion-list>
-              <button ion-button rounded full (click)="openCheckout()">Presentear</button>
-
-
-              <ion-list class="avatar">
-                <ion-range min="-200" max="200" [(ngModel)]="saturation" color="secondary">
-                  <ion-label range-right>R$ 15.000,00</ion-label>
-                </ion-range>
-                <h6>Já contribuiram</h6>
-                <ion-item>
-                  <ion-avatar item-start>
-                    <img src="assets/img/avatar1.jpg">
-                  </ion-avatar>
-
-                </ion-item>
-                <ion-item>
-                  <ion-avatar item-start>
-                    <img src="assets/img/avatar1.jpg">
-                  </ion-avatar>
-
-                </ion-item>
-                <ion-item>
-                  <ion-avatar item-start>
-                    <img src="assets/img/avatar1.jpg">
-                  </ion-avatar>
-
-                </ion-item>
-                <ion-item>
-                  <ion-avatar item-start>
-                    <img src="assets/img/avatar1.jpg">
-                  </ion-avatar>
-
-                </ion-item>
-                <ion-item>
-                  <ion-avatar item-start>
-                    <img src="assets/img/avatar1.jpg">
-                  </ion-avatar>
-
-                </ion-item>
-              </ion-list>
-
-            </ion-card-content>
-          </ion-card>
-        </ion-col>
-        <ion-col col-4 col-sm>
-          <ion-card>
-
-            <ion-card-content>
-              <ion-card-title>
-                Lua de Mel
-              </ion-card-title>
-
-              <ion-list>
-                <ion-label stacked>Presentear com:</ion-label>
-                <ion-input class="main-input" placeholder="R$"></ion-input>
-              </ion-list>
-              <button ion-button rounded full>Presentear</button>
-
-
-              <ion-list class="avatar">
-                <ion-range min="-200" max="200" [(ngModel)]="saturation" color="secondary">
-                  <ion-label range-right>R$ 15.000,00</ion-label>
-                </ion-range>
-                <h6>Já contribuiram</h6>
-                <ion-item>
-                  <ion-avatar item-start>
-                    <img src="assets/img/avatar1.jpg">
-                  </ion-avatar>
-
-                </ion-item>
-                <ion-item>
-                  <ion-avatar item-start>
-                    <img src="assets/img/avatar1.jpg">
-                  </ion-avatar>
-
-                </ion-item>
-                <ion-item>
-                  <ion-avatar item-start>
-                    <img src="assets/img/avatar1.jpg">
-                  </ion-avatar>
-
-                </ion-item>
-                <ion-item>
-                  <ion-avatar item-start>
-                    <img src="assets/img/avatar1.jpg">
-                  </ion-avatar>
-
-                </ion-item>
-                <ion-item>
-                  <ion-avatar item-start>
-                    <img src="assets/img/avatar1.jpg">
-                  </ion-avatar>
-
-                </ion-item>
-              </ion-list>
-
-            </ion-card-content>
-          </ion-card>
-        </ion-col>
-
       </ion-row>
     </ion-grid>
 

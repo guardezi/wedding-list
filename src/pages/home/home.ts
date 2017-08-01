@@ -11,8 +11,10 @@ import { CoupleProvider } from '../../providers/couple/couple';
   templateUrl: 'home.html'
 })
 export class HomePage {
+  couple=Object();
+  dreams=[];
 
-  constructor(public navCtrl: NavController, private couple:CoupleProvider) {
+  constructor(public navCtrl: NavController, private _couple:CoupleProvider) {
     this.getCouple();
   }
 
@@ -24,6 +26,9 @@ export class HomePage {
     this.navCtrl.push(CheckoutPage);
   }
   getCouple(){
-    this.couple.getCouple();
+    this._couple.getCouple()
+    .then(data=>{
+      this.couple = data;
+    })
   }
 }
