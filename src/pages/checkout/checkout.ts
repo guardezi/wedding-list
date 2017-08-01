@@ -1,17 +1,22 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 
 @Component({
   selector: 'page-checkout',
   templateUrl: 'checkout.html',
 })
 export class CheckoutPage {
-
+  user;
+  dream;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad CheckoutPage');
+    this.dream=this.navParams.get('dream');
+    this.user=this.navParams.get('user');
+
+    console.log('user->',this.user);
+    console.log('dream->',this.dream);
   }
 
 }

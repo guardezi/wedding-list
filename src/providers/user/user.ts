@@ -16,7 +16,6 @@ declare var FB;
   export class UserProvider {
 
     constructor(public http: Http,private storage:Storage) {
-      console.log('facebook-> ',FB);
       FB.init({
         appId      : '465416357172531',
         cookie     : true,
@@ -30,33 +29,20 @@ declare var FB;
       });
     }
 
-    getUserStatus(){
-
-    }
-
-    setUser(){
-
-    }
-
-    userRegister(user){
-      console.log('user->',user);
-    }
 
     fbLogin(){
       return new Promise((resolve, reject)=> {
         FB.getLoginStatus(function(response) {
           if (response.authResponse) {
-            console.log('Welcome!  Fetching your information.... ');
             FB.api('/me?fields=id,name,email,first_name,last_name,gender', function(response) {
-              console.log('Good to see you, ' + response.name + '.');
+              response.photo="http://graph.facebook.com/"+response.id+"/picture?type=square";
               resolve(response);
             });
           } else {
             FB.login(function(response) {
               if (response.authResponse) {
-                console.log('Welcome!  Fetching your information.... ');
                 FB.api('/me', function(response) {
-                  console.log('Good to see you, ' + response.name + '.');
+                  response.photo="http://graph.facebook.com/"+response.id+"/picture?type=square";
                   resolve(response);
                 });
               } else {

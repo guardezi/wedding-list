@@ -25,16 +25,10 @@ export class HomePage {
     console.log('selecitonado -> ',dream);
     this.user.fbLogin()
     .then(user=>{
-      console.log("user data->",user);
-
-      // this.navCtrl.push(CheckoutPage);
+      this.navCtrl.push(CheckoutPage,{dream:dream,user:user});
     });
-    // this.navCtrl.push(LoginPage);
   }
 
-  openCheckout(){
-    this.navCtrl.push(CheckoutPage);
-  }
   getCouple(){
     this._couple.getCouple()
     .then(data=>{
