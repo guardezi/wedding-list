@@ -5,6 +5,7 @@ import { LoginPage } from '../login/login';
 import { CheckoutPage } from '../checkout/checkout';
 
 import { CoupleProvider } from '../../providers/couple/couple';
+import { UserProvider } from '../../providers/user/user';
 
 @Component({
   selector: 'page-home',
@@ -14,13 +15,21 @@ export class HomePage {
   couple=Object();
   dreams=[];
 
-  constructor(public navCtrl: NavController, private _couple:CoupleProvider) {
+  constructor(public navCtrl: NavController,
+    private _couple:CoupleProvider,
+    private user:UserProvider) {
     this.getCouple();
   }
 
   selectGift(dream){
     console.log('selecitonado -> ',dream);
-    this.navCtrl.push(LoginPage);
+    this.user.fbLogin()
+    .then(user=>{
+      console.log("user data->",user);
+
+      // this.navCtrl.push(CheckoutPage);
+    });
+    // this.navCtrl.push(LoginPage);
   }
 
   openCheckout(){
