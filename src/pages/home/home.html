@@ -34,10 +34,10 @@
 
               <ion-list>
                 <ion-label stacked>Presentear com:</ion-label>
-                <ion-input class="main-input" placeholder="R$"></ion-input>
+                <ion-input class="main-input" [(ngModel)]="dream.contribution" placeholder="R$"></ion-input>
               </ion-list>
 
-              <button ion-button rounded full (click)="selectGift()">Presentear</button>
+              <button ion-button rounded full (click)="selectGift(dream)">Presentear</button>
               <ion-list class="avatar">
                 <ion-range min="0" max="{{dream.price}}" [(ngModel)]="dream.received" readonly disabled color="secondary">
                   <ion-label range-right>R$ {{dream.price}}</ion-label>

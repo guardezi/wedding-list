@@ -18,7 +18,8 @@ export class HomePage {
     this.getCouple();
   }
 
-  selectGift(){
+  selectGift(dream){
+    console.log('selecitonado -> ',dream);
     this.navCtrl.push(LoginPage);
   }
 

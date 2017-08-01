@@ -11,6 +11,7 @@ import { LoginPage } from '../pages/login/login';
 import { CheckoutPage } from '../pages/checkout/checkout';
 import { DeviceProvider } from '../providers/device/device';
 import { CoupleProvider } from '../providers/couple/couple';
+import { UserProvider } from '../providers/user/user';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { CoupleProvider } from '../providers/couple/couple';
   SplashScreen,
   {provide: ErrorHandler, useClass: IonicErrorHandler},
   DeviceProvider,
-  CoupleProvider
+  CoupleProvider,
+    UserProvider
   ]
 })
 export class AppModule {}
