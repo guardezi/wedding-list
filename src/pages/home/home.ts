@@ -6,6 +6,7 @@ import { CheckoutPage } from '../checkout/checkout';
 
 import { CoupleProvider } from '../../providers/couple/couple';
 import { UserProvider } from '../../providers/user/user';
+import { PayProvider } from '../../providers/pay/pay';
 
 @Component({
   selector: 'page-home',
@@ -17,21 +18,25 @@ export class HomePage {
 
   constructor(public navCtrl: NavController,
     private _couple:CoupleProvider,
-    private user:UserProvider) {
+    private user:UserProvider,
+    private pay:PayProvider) {
     this.getCouple();
   }
 
   selectGift(dream){
-    console.log('selecitonado -> ',dream);
     this.user.fbLogin()
     .then(user=>{
-      this.navCtrl.push(CheckoutPage,{dream:dream,user:user});
+      this.pay.getPayment(user,dream)
+      .then(payment=>{
+        this.navCtrl.push(CheckoutPage,{dream:dream,user:user, payment:payment});
+      });
     });
   }
 
   getCouple(){
     this._couple.getCouple()
     .then(data=>{
+      console.log("data from server-> ",data);
       this.couple = data;
     })
   }

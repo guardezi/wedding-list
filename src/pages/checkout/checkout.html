@@ -4,7 +4,7 @@
 
     <p class="msg">Vamos utilizar o <img class="pagseguro" src="https://logodownload.org/wp-content/uploads/2016/09/pagseguro-logo-2.png" width="150px"> para facilitar no presente e é 100% seguro, okay?</p>
 
-    <button ion-button rounded full style="max-width: 200px; margin: 0 auto;">Continuar</button>
+    <a href="{{payment.init_point}}" ion-button rounded full style="max-width: 200px; margin: 0 auto;" *ngIf="payment" >Continuar</a>
   </div>
 
 </ion-content>
