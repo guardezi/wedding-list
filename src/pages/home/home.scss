@@ -4,12 +4,12 @@ page-home {
     position: initial;
   }
 
-  .header-md::after {
+  .header-md::after, .header-ios::after {
     display: none;
   }
 
   header {
-    height: 350px;
+    height: $headerHeight;
     width: 100%;
     background-image: url('../assets/img/cover.jpg');
     background-size: cover;
@@ -18,8 +18,6 @@ page-home {
     align-items: center;
     justify-content: center;
     position: relative;
-
-
 
     .title {
       align-items: center;
@@ -33,19 +31,19 @@ page-home {
         text-align: center;
         color: $white;
 
-        @media screen and (max-width: 959px) {
+        @media screen and (max-width: $desktop) {
           font-size: 4em;
         }
       }
 
       .couple-subtitle {
-        font-size: 2.5em;
+        font-size: 2em;
         display: block;
         letter-spacing: 0.1em;
         font-weight: 700;
         color: $white;
 
-        @media screen and (max-width: 959px) {
+        @media screen and (max-width: $desktop) {
           font-size: 1em;
         }
       }
@@ -58,16 +56,15 @@ page-home {
       z-index: 9;
       width: 100%;
       height: 100%;
-      background-color: #30d0fb;
-      background-image: linear-gradient(147deg, #30d0fb 0%, #8142f9 68%);
+      background-color: $primaryColor;
+      background-image: $gradient;
       opacity: 0.7;
     }
   }
 
   .avatar {
-    margin: 20px 0 0;
-    border-top: 1px solid #eee;
-    padding: 15px 0 0;
+    margin: $rootSize * 2 0;
+    border-top: $border solid $grey;
 
     ion-item {
       display: inline-block;
@@ -80,11 +77,11 @@ page-home {
       }
 
       ion-avatar[item-start] {
-        margin: 0 5px 0;
-        min-height: 22px;
-        min-width: 22px;
-        height: 22px;
-        width: 22px;
+        margin: 0 ($rootSize / 2) 0;
+        min-height: $avatarSize;
+        min-width: $avatarSize;
+        height: $avatarSize;
+        width: $avatarSize;
 
         img {
           height: 100%;
@@ -105,79 +102,26 @@ page-home {
     }
 
     .range-bar {
-      border-radius: 50px;
-      height: 20px;
-      background: white;
-      border: 1px solid #30d0fb;
-      top: 11px;
+      border-radius: $fullBorderRadius;
+      height: $rootSize * 2.5;
+      background: $white;
+      border: $border solid $primaryColor;
 
       &.range-bar-active {
-        background-color: #30fbc1;
-        background-image: linear-gradient(147deg, #30fbf4 0%, #30fbc1 68%);
+        background-color: $primaryColor;
       }
     }
   }
 
   .main-input {
-    border: 2px solid #ddd !important;
-    border-radius: 8px;
-    color: black;
+    border: $borderMedium solid $grey !important;
+    border-radius: $rootSize;
+    color: $darkGrey;
     margin: $rootSize 0;
 
     &:focus {
-      border-color: #8142f9;
-    }
-  }
-
-  body {
-    padding: 0;
-    background: #e6e6e6;
-    font-family: 'Helvetica', 'Arial';
-  }
-
-  li {
-    list-style: none;
-  }
-
-  .main-list {
-    margin: 16px;
-    padding-left: 0;
-
-    .item-list {
-      margin: 16px 0;
-      background-color: #fff;
-      border-radius: 4px;
-      display: flex;
-      flex-direction: row;
-      padding: 8px 16px;
-      align-items: center;
-      flex-wrap: nowrap;
-      box-shadow: 0 0 10px 0 rgba(158, 156, 156, 0.41);
-      transition: all .5s ease-in-out;
-      cursor: pointer;
-
-      &:hover {
-        box-shadow: 0 0 12px 0 rgba(158, 156, 156, 0.41);
-        transform: translate(0, -1px);
-      }
-
-      .info-content {
-        flex-grow: 1;
-
-        img {
-          width: 32px;
-          height: 32px;
-          border-radius: 50%;
-          display: inline-block;
-          vertical-align: middle;
-          margin-right: 20px;
-        }
-
-        h4 {
-          display: inline-block;
-          margin-right: 20%;
-        }
-      }
+      border-color: $primaryColor;
+      color: #000000;
     }
   }
 

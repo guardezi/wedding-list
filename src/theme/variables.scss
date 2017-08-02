@@ -24,6 +24,8 @@ $app-direction: ltr;
 $primaryColor: #30d0fb;
 $secondaryColor: #8142f9;
 $white: #FFF;
+$darkGrey: #999;
+$grey: #DDD;
 
 // Responsiveness
 $mobile: 768px;
@@ -32,9 +34,31 @@ $desktop: 1008px;
 $widescreen: 1200px;
 $fullhd: 1392px;
 
-$rootSize: 8px;
-$cardBorderRadius: 18px;
+// Globals Variables
+$headerHeight: 350px;
 
+$avatarSize: 22px;
+
+$cardBorderRadius: 18px;
+$cardBoxShadow: 0 0 30px rgba(0,0,0,0.1);
+
+$fullBorderRadius: 30px;
+
+$gradient: linear-gradient(147deg, $primaryColor 0%, $secondaryColor 68%);
+
+
+
+
+$borderBold: 4px;
+$borderMedium: 2px;
+$border: 1px;
+
+
+// Grid
+$rootSize: 8px;
+
+
+// Overrides
 $toolbar-background: $white;
 $toolbar-border-color: $white;
 
@@ -46,8 +70,6 @@ $toolbar-border-color: $white;
 // to match your app's branding. Ionic uses a Sass map of
 // colors so you can add, rename and remove colors as needed.
 // The "primary" color is the only required color in the map.
-
-
 
 $colors: (
   primary:    #30d0fb,

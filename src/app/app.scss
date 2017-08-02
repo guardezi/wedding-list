@@ -22,9 +22,27 @@
   margin: 0 auto;
 }
 
+.col[col-3] {
+  @media screen and (max-width: $desktop) {
+    width: 100%;
+    min-width: 100%;
+    box-sizing: border-box;
+  }
+}
+
 // Site Globals //
 
-ion-app.md {
+body {
+  padding: 0;
+  background: #e6e6e6;
+  font-family: 'Helvetica', 'Arial';
+}
+
+li {
+  list-style: none;
+}
+
+ion-app.md, ion-app.ios {
   font-family: 'Poppins', sans-serif;
 }
 
@@ -50,10 +68,10 @@ ion-app.md {
   font-weight: 700;
   box-shadow: none;
   background-color: $primaryColor;
-  background-image: linear-gradient(147deg, $primaryColor 0%, $secondaryColor 68%);
+  background-image: $gradient;
 
   &:hover {
-    background-image: linear-gradient(147deg, $primaryColor 100%, $secondaryColor 0%);;
+    background-image: $gradient;
   }
 }
 
@@ -66,38 +84,31 @@ ion-app.md {
 }
 
 .button-clear {
- height: 5.6rem;
+ height: $rootSize * 10;
  color: $secondaryColor;
 }
 
 .button-full {
-  border-radius: 50px;
+  border-radius: $fullBorderRadius;
   letter-spacing: 0.1em;
 }
 
-.col[col-3] {
-  @media screen and (max-width: 959px) {
-    width: 100%;
-    min-width: 100%;
-    box-sizing: border-box;
-  }
-}
-
+// Card
 .card {
   border-radius: $cardBorderRadius;
-  box-shadow: 0 0 30px rgba(0,0,0,0.1);
-  border: 4px solid transparent;
+  box-shadow: $cardBoxShadow;
+  border: $borderBold solid transparent;
   padding: $rootSize / 2;
   transition: all .2s ease-in-out;
   display: inline-block;
 
   ion-label {
     font-weight: bold;
-    color: #999;
+    color: $darkGrey;
   }
 
   &.highlight {
-    border: 4px solid $secondaryColor;
+    border: $borderBold solid $secondaryColor;
 
     .card-title {
       font-size: 18px;
@@ -106,16 +117,16 @@ ion-app.md {
     }
   }
 
-  .card-title, .card-tittle-md {
+  .card-title, .card-title-md, .card-title-ios {
     font-size: 16px;
     height: 65px;
   }
 
   .alreary-donators-title {
     text-transform: uppercase;
-    color: #999;
+    color: $darkGrey;
     letter-spacing: 0.1em;
-    margin-bottom: 15px;
+    margin: ($rootSize * 2) 0;
     font-size: 12px;
   }
 }
@@ -133,7 +144,7 @@ ion-app.md {
     .button {
       width: 35%;
       margin-left: $rootSize * 2;
-      padding: 26px;
+      padding: $rootSize * 3;
     }
   }
 }
