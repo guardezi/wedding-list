@@ -1,71 +1,61 @@
-$rootSize: 8px;
-
 page-home {
+
+  ion-header {
+    position: initial;
+  }
+
+  .header-md::after {
+    display: none;
+  }
+
   header {
     height: 350px;
     width: 100%;
-    position: relative;
-    overflow: hidden;
+    background-image: url('../assets/img/cover.jpg');
+    background-size: cover;
+    background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 
-    @media screen and (max-width: 959px) {
-      height: 300px;
-    }
+
 
     .title {
+      align-items: center;
       position: absolute;
-      top: 50px;
-      left: 0;
-      width: 100%;
-      z-index: 3;
-      padding: 60px 30px;
-    }
+      z-index: 10;
 
-    h1, h2 {
-      color: white;
-      text-align: center;
-    }
+      .couple-title {
+        font-family: 'Dancing Script', cursive;
+        font-size: 6em;
+        transform: rotate(-1deg);
+        text-align: center;
+        color: $white;
 
-    h1 {
-      font-family: 'Dancing Script', cursive;
-      font-size: 110px;
-      margin: 10px 0 0;
-      opacity: 1;
-      transform: rotate(-1deg);
+        @media screen and (max-width: 959px) {
+          font-size: 4em;
+        }
+      }
 
-      @media screen and (max-width: 959px) {
-        font-size: 46px;
-        margin: 0 0 30px;
+      .couple-subtitle {
+        font-size: 2.5em;
+        display: block;
+        letter-spacing: 0.1em;
+        font-weight: 700;
+        color: $white;
+
+        @media screen and (max-width: 959px) {
+          font-size: 1em;
+        }
       }
     }
 
-    h2 {
-      font-size: 30px;
-      display: block;
-      letter-spacing: 0.1em;
-      font-weight: 700;
-
-      @media screen and (max-width: 959px) {
-        font-size: 20px;
-      }
-    }
-
-    img {
-      width: 100%;
-      height: auto;
-      position: absolute;
-      z-index: 1;
-      max-width: none;
-      transform: scale(1.5);
-    }
-
-    .color {
+    .color-overlay {
       position: absolute;
       top: 0;
       left: 0;
-      z-index: 2;
+      z-index: 9;
       width: 100%;
       height: 100%;
       background-color: #30d0fb;

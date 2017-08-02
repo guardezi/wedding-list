@@ -11,17 +11,16 @@
   </ion-header>
 
   <header>
+    <div class="color-overlay"></div>
     <div class="title">
-      <h1> Haira & Rafael</h1>
-      <h2>Faça parte da realização do nosso sonho</h2>
+      <h1 class="couple-title"> Haira & Rafael</h1>
+      <h2 class="couple-subtitle">Faça parte da realização do nosso sonho</h2>
     </div>
-    <div class="color"></div>
-    <img src="../assets/img/cover.jpg"/>
   </header>
   <div class="ui container">
     <ion-grid hideWhen="!couple && !couple.main_dreams.length">
       <ion-row >
-        <ion-col col-4 col-sm *ngFor="let dream of couple.main_dreams">
+        <ion-col col-3 col-sm *ngFor="let dream of couple.main_dreams">
           <ion-card class="highlight">
             <div class="ui icon container" padding>
               <ion-icon name="ios-cloudy-night-outline" color="primary"></ion-icon>
@@ -43,12 +42,11 @@
                   <ion-label range-right>R$ {{dream.price}}</ion-label>
                 </ion-range>
                 <div *ngIf="dream && dream.contribers">
-                  <h6>Já contribuiram</h6>
+                  <h6>Já presenteram</h6>
                   <ion-item  *ngFor="let c of dream.contribers">
                     <ion-avatar item-start >
                       <img src="{{c.photo}}">
                     </ion-avatar>
-
                   </ion-item>
                 </div>
               </ion-list>
@@ -60,7 +58,7 @@
 
     <ion-grid hideWhen="!couple && !couple.secondary_dreams.length">
       <ion-row>
-        <ion-col col-4 col-sm *ngFor="let dream of couple.secondary_dreams">
+        <ion-col col-3 col-sm *ngFor="let dream of couple.secondary_dreams">
           <ion-card>
             <ion-card-content>
               <ion-card-title>
@@ -78,7 +76,7 @@
                   <ion-label range-right>R$ {{dream.price}}</ion-label>
                 </ion-range>
                 <div *ngIf="dream && dream.contribers && dream.contribers.length">
-                  <h6>Já contribuiram</h6>
+                  <h6 class="alreary-donators-title">Já presentearam</h6>
                   <ion-item  *ngFor="let c of dream.contribers">
                     <ion-avatar item-start >
                       <img src="{{c.photo}}">

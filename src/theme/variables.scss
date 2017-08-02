@@ -21,8 +21,22 @@ $app-direction: ltr;
 // the Sass variables found in Ionic's source scss files.
 // To view all the possible Ionic variables, see:
 // http://ionicframework.com/docs/theming/overriding-ionic-variables/
+$primaryColor: #30d0fb;
+$secondaryColor: #8142f9;
+$white: #FFF;
 
+// Responsiveness
+$mobile: 768px;
+$tablet: 769px;
+$desktop: 1008px;
+$widescreen: 1200px;
+$fullhd: 1392px;
 
+$rootSize: 8px;
+$cardBorderRadius: 18px;
+
+$toolbar-background: $white;
+$toolbar-border-color: $white;
 
 
 // Named Color Variables
@@ -32,6 +46,8 @@ $app-direction: ltr;
 // to match your app's branding. Ionic uses a Sass map of
 // colors so you can add, rename and remove colors as needed.
 // The "primary" color is the only required color in the map.
+
+
 
 $colors: (
   primary:    #30d0fb,
