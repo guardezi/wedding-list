@@ -63,7 +63,7 @@ page-home {
   }
 
   .avatar {
-    margin: $rootSize * 2 0;
+    margin: $rootSize 0;
     border-top: $border solid $grey;
 
     ion-item {
@@ -93,10 +93,14 @@ page-home {
 
   .range {
     padding: 0;
+    width: 65%;
+
+    .label {
+      margin-top: $rootSize * 3;
+    }
   }
 
   .range-slider {
-
     .range-knob-handle {
       display: none;
     }

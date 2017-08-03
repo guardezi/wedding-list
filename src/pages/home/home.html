@@ -22,14 +22,14 @@
       <ion-row >
         <ion-col col-3 col-sm *ngFor="let dream of couple.main_dreams">
           <ion-card class="highlight">
-            <div class="ui icon container" padding>
-              <ion-icon name="ios-cloudy-night-outline" color="primary"></ion-icon>
-            </div>
+            <ion-icon class="icon-title" name="ios-cloudy-night-outline" color="primary"></ion-icon>
+
             <ion-card-content>
               <ion-card-title>
                 {{dream.title}}
               </ion-card-title>
-              <p> {{dream.desciption}}</p>
+
+              <p>{{dream.desciption}}</p>
 
               <ion-list>
                 <ion-label stacked>Presentear com:</ion-label>

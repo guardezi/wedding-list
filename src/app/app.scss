@@ -17,12 +17,18 @@
 
 
 // Grid & Container //
+.grid {
+  padding: 0;
+}
+
 .ui.container {
   max-width: 980px;
   margin: 0 auto;
 }
 
 .col[col-3] {
+  padding: 0;
+
   @media screen and (max-width: $desktop) {
     width: 100%;
     min-width: 100%;
@@ -69,14 +75,11 @@ ion-app.md, ion-app.ios {
   box-shadow: none;
   background-color: $primaryColor;
   background-image: $gradient;
+  font-size: 1em;
 
   &:hover {
     background-image: $gradient;
   }
-}
-
-.button-inner {
-  font-size: 16px;
 }
 
 .button-effect {
@@ -101,6 +104,14 @@ ion-app.md, ion-app.ios {
   padding: $rootSize / 2;
   transition: all .2s ease-in-out;
   display: inline-block;
+  display: relative;
+
+  .icon-title {
+    font-size: 2.5em;
+    position: absolute;
+    top: $rootSize * 3;
+    left: $rootSize * 4.5;
+  }
 
   ion-label {
     font-weight: bold;
@@ -114,12 +125,13 @@ ion-app.md, ion-app.ios {
       font-size: 18px;
       color: $secondaryColor;
       text-transform: capitalize;
+
+      margin-top: $rootSize * 3;
     }
   }
 
   .card-title, .card-title-md, .card-title-ios {
     font-size: 16px;
-    height: 65px;
   }
 
   .alreary-donators-title {
@@ -132,9 +144,6 @@ ion-app.md, ion-app.ios {
 }
 
 .main-list {
-  .range {
-    width: 65%;
-  }
 
   .options-content {
     display: flex;

@@ -10,13 +10,41 @@ page-checkout {
     }
   }
 
-  .msg {
-    font-size: 18px;
-    padding: 15px 30px;
+  .icon-centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    ion-icon {
+      font-size: 5em;
+      color: $secondaryColor;
+      margin: ($rootSize * 4) 0;
+    }
+  }
+
+  .ui.message.checkout {
+    font-size: 1.5em;
+    color: $secondaryColor;
+    padding: $rootSize;
+    text-align: center;
+    padding: $rootSize;
+    text-align: center;
+    margin: ($rootSize * 2) 0;
 
     strong {
-      font-weight: bold;
+      color: $primaryColor;
+      font-weight: 700;
     }
+  }
+
+  .msg {
+    font-size: 1em;
+    color: $darkGrey;
+    padding: 0 16px;
+    text-align: center;
+    margin: 40px 0;
+
   }
 
   .pagseguro {
@@ -24,16 +52,5 @@ page-checkout {
     display: inline-block;
   }
 
-  .ui.message.checkout {
-    border-radius: 20px;
-    font-size: 2em;
-    color: white;
-    padding: 30px;
-    background-color: $secondaryColor;
 
-    strong {
-      color: $primaryColor;
-      font-weight: 700;
-    }
-  }
 }
