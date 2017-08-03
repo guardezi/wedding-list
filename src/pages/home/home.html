@@ -19,7 +19,10 @@
   </header>
   <div class="ui container">
     <ion-grid hideWhen="!couple && !couple.main_dreams.length">
-      <ion-row >
+      <h2 text-center>
+        Nossos sonhos
+      </h2>
+      <ion-row>
         <ion-col col-3 col-sm *ngFor="let dream of couple.main_dreams">
           <ion-card class="highlight">
             <ion-icon class="icon-title" name="ios-cloudy-night-outline" color="primary"></ion-icon>
@@ -57,6 +60,9 @@
     </ion-grid>
 
     <ion-grid hideWhen="!couple && !couple.secondary_dreams.length">
+      <h2 text-center>
+        Chá de panela
+      </h2>
       <ion-row>
         <ion-col col-3 col-sm *ngFor="let dream of couple.secondary_dreams">
           <ion-card>

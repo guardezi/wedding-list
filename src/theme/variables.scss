@@ -34,12 +34,15 @@ $desktop: 1008px;
 $widescreen: 1200px;
 $fullhd: 1392px;
 
+// Grid
+$rootSize: 8px;
+
 // Globals Variables
 $headerHeight: 350px;
 
 $avatarSize: 22px;
 
-$cardBorderRadius: 18px;
+$cardBorderRadius: $rootSize * 2;
 $cardBoxShadow: 0 0 30px rgba(0,0,0,0.1);
 
 $fullBorderRadius: 30px;
@@ -54,8 +57,6 @@ $borderMedium: 2px;
 $border: 1px;
 
 
-// Grid
-$rootSize: 8px;
 
 
 // Overrides
