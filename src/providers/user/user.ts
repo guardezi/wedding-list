@@ -35,14 +35,14 @@ declare var FB;
         FB.getLoginStatus(function(response) {
           if (response.authResponse) {
             FB.api('/me?fields=id,name,email,first_name,last_name,gender', function(response) {
-              response.photo="http://graph.facebook.com/"+response.id+"/picture?type=square";
+              response.photo="https://graph.facebook.com/"+response.id+"/picture?type=square";
               resolve(response);
             });
           } else {
             FB.login(function(response) {
               if (response.authResponse) {
                 FB.api('/me', function(response) {
-                  response.photo="http://graph.facebook.com/"+response.id+"/picture?type=square";
+                  response.photo="https://graph.facebook.com/"+response.id+"/picture?type=square";
                   resolve(response);
                 });
               } else {
