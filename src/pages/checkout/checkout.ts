@@ -17,9 +17,10 @@ export class CheckoutPage {
     this.user=this.navParams.get('user');
     this.payment=this.navParams.get('payment');
     this.payment=this.payment.response;
-    console.log('user->',this.user);
-    console.log('dream->',this.dream);
-    console.log('payment->',this.payment);
+
+  }
+  registerContribution(){
+    // this
   }
 
 }

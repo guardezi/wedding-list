@@ -25,9 +25,19 @@ import { DeviceProvider } from '../device/device';
           resolve(pay);
         })
         .catch(e=>{
-          console.log('error->',e);
+          reject(e);
         })
       });
+    }
+
+    registerContribuition(user, dream, payment){
+      var contribution = {
+        couple:this.device.COUPLE_ID,
+        user:user,
+        dream:dream,
+        payment:payment
+      }
+      this.device.post(this.device.API+this.device.CONTRIBUTION,contribution);
     }
 
   }

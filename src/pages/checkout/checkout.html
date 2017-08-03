@@ -10,12 +10,12 @@
             <br/>Haira e Rafael
           </small>
           <br/>com <strong>R$ {{dream.contribution}},00</strong>
-          <br/>para Lua de Mel!
+          <br/>para {{dream.title}}!
         </h1>
 
         <p class="msg">Vamos utilizar o MercadoPago para facilitar no presente e é <strong>100% seguro</strong>, okay?</p>
 
-        <a href="{{payment.init_point}}" ion-button rounded full style="max-width: 200px; margin: 0 auto;" *ngIf="payment" >Continuar</a>
+        <a href="{{payment.init_point}}" ion-button rounded full style="max-width: 200px; margin: 0 auto;" *ngIf="payment" (click)="registerContribution()">Continuar</a>
       </div>
 
     </ion-card-content>

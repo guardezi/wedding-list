@@ -15,6 +15,7 @@ export class CoupleProvider {
 
       this.device.get(this.device.API+this.device.COUPLE)
       .then(res=>{
+
         resolve(res.json());
       });
     });

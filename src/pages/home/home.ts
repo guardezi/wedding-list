@@ -48,6 +48,10 @@ export class HomePage {
         .then(payment=>{
           this.loading.dismiss();
           this.navCtrl.push(CheckoutPage,{dream:dream,user:user, payment:payment});
+        })
+        .catch(e=>{
+          this.loading.dismiss();
+          this.alerter.present();
         });
       });
     }else{
