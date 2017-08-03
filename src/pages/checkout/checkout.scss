@@ -1,6 +1,6 @@
 page-checkout {
   .main-input {
-    border: 2px solid #ddd !important;
+    border: $borderMedium solid $darkGrey !important;
     border-radius: 8px;
     color: black;
     margin: $rootSize 0;
@@ -10,30 +10,47 @@ page-checkout {
     }
   }
 
-  .msg {
-    font-size: 18px;
-    padding: 15px 30px;
+  .icon-centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 
-    strong {
-      font-weight: bold;
+    ion-icon {
+      font-size: 5em;
+      color: $secondaryColor;
+      margin: ($rootSize * 4) 0;
     }
   }
 
-  .pagseguro {
-    vertical-align: middle;
-    display: inline-block;
-  }
-
   .ui.message.checkout {
-    border-radius: 20px;
-    font-size: 2em;
-    color: white;
-    padding: 30px;
-    background-color: $secondaryColor;
+    font-size: 1.5em;
+    color: $secondaryColor;
+    padding: $rootSize;
+    text-align: center;
+    padding: $rootSize;
+    text-align: center;
+    margin: ($rootSize * 2) 0;
+
+    @media screen and (min-width: $desktop) {
+      font-size: 2.5em;
+    }
 
     strong {
       color: $primaryColor;
       font-weight: 700;
+    }
+  }
+
+  .msg {
+    font-size: 1em;
+    color: $darkGrey;
+    padding: 0 ($rootSize * 2);
+    text-align: center;
+    margin: ($rootSize * 6) 0;
+
+    @media screen and (min-width: $desktop) {
+      font-size: 1.5em;
     }
   }
 }

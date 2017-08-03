@@ -1,10 +1,27 @@
 <ion-content padding>
-  <div class="ui container">
-    <h1 class="ui message checkout">Você está presenteando Haira e Rafael com <strong>R$ 100,00</strong> para Lua de Mel!</h1>
+  <ion-card>
+    <ion-card-content>
+      <div class="ui container middles" *ngIf="payment">
+        <div class="icon-centered">
+          <ion-icon ios="ios-heart" md="md-heart"></ion-icon>
+        </div>
+        <h1 class="ui message checkout">
+          <small>Você está presenteando
+            <br/>Haira e Rafael
+          </small>
+          <br/>com <strong>R$ {{dream.contribution}},00</strong>
+          <br/>para Lua de Mel!
+        </h1>
 
-    <p class="msg">Vamos utilizar o <img class="pagseguro" src="https://logodownload.org/wp-content/uploads/2016/09/pagseguro-logo-2.png" width="150px"> para facilitar no presente e é 100% seguro, okay?</p>
+        <p class="msg">Vamos utilizar o MercadoPago para facilitar no presente e é <strong>100% seguro</strong>, okay?</p>
 
-    <a href="{{payment.init_point}}" ion-button rounded full style="max-width: 200px; margin: 0 auto;" *ngIf="payment" >Continuar</a>
-  </div>
+        <a href="{{payment.init_point}}" ion-button rounded full style="max-width: 200px; margin: 0 auto;" *ngIf="payment" >Continuar</a>
+      </div>
+
+    </ion-card-content>
+  </ion-card>
+
+
+
 
 </ion-content>

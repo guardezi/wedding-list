@@ -19,17 +19,20 @@
   </header>
   <div class="ui container">
     <ion-grid hideWhen="!couple && !couple.main_dreams.length">
-      <ion-row >
+      <h2 text-center>
+        Nossos sonhos
+      </h2>
+      <ion-row>
         <ion-col col-3 col-sm *ngFor="let dream of couple.main_dreams">
           <ion-card class="highlight">
-            <div class="ui icon container" padding>
-              <ion-icon name="ios-cloudy-night-outline" color="primary"></ion-icon>
-            </div>
+            <ion-icon class="icon-title" name="ios-cloudy-night-outline" color="primary"></ion-icon>
+
             <ion-card-content>
               <ion-card-title>
                 {{dream.title}}
               </ion-card-title>
-              <p> {{dream.desciption}}</p>
+
+              <p>{{dream.description}}</p>
 
               <ion-list>
                 <ion-label stacked>Presentear com:</ion-label>
@@ -42,7 +45,7 @@
                   <ion-label range-right>R$ {{dream.price}}</ion-label>
                 </ion-range>
                 <div *ngIf="dream && dream.contribers">
-                  <h6 class="alreary-donators-title">Já presenteram</h6>
+                  <h6 class="alreary-donators-title">Já presentearam</h6>
                   <ion-item  *ngFor="let c of dream.contribers">
                     <ion-avatar item-start >
                       <img src="{{c.photo}}">
@@ -57,6 +60,9 @@
     </ion-grid>
 
     <ion-grid hideWhen="!couple && !couple.secondary_dreams.length">
+      <h2 text-center>
+        Chá de panela
+      </h2>
       <ion-row>
         <ion-col col-3 col-sm *ngFor="let dream of couple.secondary_dreams">
           <ion-card>

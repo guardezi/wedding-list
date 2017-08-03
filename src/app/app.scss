@@ -17,13 +17,20 @@
 
 
 // Grid & Container //
+.grid {
+  padding: 0;
+}
+
 .ui.container {
   max-width: 980px;
   margin: 0 auto;
 }
 
 .col[col-3] {
-  @media screen and (max-width: $desktop) {
+  padding: 0;
+  min-width: 320px;
+
+  @media screen and (max-width: $tablet) {
     width: 100%;
     min-width: 100%;
     box-sizing: border-box;
@@ -32,10 +39,10 @@
 
 // Site Globals //
 
-body {
+.content {
   padding: 0;
-  background: #e6e6e6;
-  font-family: 'Helvetica', 'Arial';
+  background: $grey;
+  font-family: 'Open Sans', 'Arial', 'sans-serif';
 }
 
 li {
@@ -61,7 +68,6 @@ ion-app.md, ion-app.ios {
   margin: $rootSize auto;
 }
 
-
 // Button
 .button-default {
   padding: $rootSize * 2;
@@ -69,14 +75,11 @@ ion-app.md, ion-app.ios {
   box-shadow: none;
   background-color: $primaryColor;
   background-image: $gradient;
+  font-size: 1em;
 
   &:hover {
     background-image: $gradient;
   }
-}
-
-.button-inner {
-  font-size: 16px;
 }
 
 .button-effect {
@@ -96,11 +99,20 @@ ion-app.md, ion-app.ios {
 // Card
 .card {
   border-radius: $cardBorderRadius;
-  box-shadow: $cardBoxShadow;
-  border: $borderBold solid transparent;
+  // box-shadow: $cardBoxShadow;
+  border: $borderMedium solid transparent;
   padding: $rootSize / 2;
   transition: all .2s ease-in-out;
   display: inline-block;
+  display: relative;
+
+  .icon-title {
+    font-size: 2.5em;
+    position: absolute;
+    top: $rootSize * 3;
+    left: $rootSize * 4.5;
+    font-weight: bold;
+  }
 
   ion-label {
     font-weight: bold;
@@ -108,18 +120,20 @@ ion-app.md, ion-app.ios {
   }
 
   &.highlight {
-    border: $borderBold solid $secondaryColor;
+    border: $borderMedium solid $secondaryColor;
+    box-shadow: none;
 
     .card-title {
-      font-size: 18px;
+      font-size: 1.4em;
       color: $secondaryColor;
       text-transform: capitalize;
+
+      margin-top: $rootSize * 3;
     }
   }
 
-  .card-title, .card-title-md, .card-title-ios {
-    font-size: 16px;
-    height: 65px;
+  .card-title {
+    font-size: 1.4em;
   }
 
   .alreary-donators-title {
@@ -132,9 +146,6 @@ ion-app.md, ion-app.ios {
 }
 
 .main-list {
-  .range {
-    width: 65%;
-  }
 
   .options-content {
     display: flex;

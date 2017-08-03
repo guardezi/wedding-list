@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController,NavParams, Slides,ModalController,LoadingController,Events} from 'ionic-angular';
+import { NavController,NavParams, Slides,ModalController,LoadingController,AlertController} from 'ionic-angular';
 
 import { LoginPage } from '../login/login';
 import { CheckoutPage } from '../checkout/checkout';
@@ -17,20 +17,42 @@ export class HomePage {
   dreams=[];
 
   constructor(public navCtrl: NavController,
+    private loader:LoadingController,
+    private alert:AlertController,
     private _couple:CoupleProvider,
     private user:UserProvider,
     private pay:PayProvider) {
     this.getCouple();
   }
 
+  loading=this.loader.create({
+    spinner: 'hide',
+    content: `
+    <div class="custom-spinner-container">
+    <div class="custom-spinner-box"></div>
+    Carregando Aguarde...
+    </div>`
+  });
+  alerter = this.alert.create({
+    title: 'Ops',
+    message: 'Ops, por favor informe com de quanto é o seu presente',
+    buttons: ['Ok']
+  });
+
   selectGift(dream){
-    this.user.fbLogin()
-    .then(user=>{
-      this.pay.getPayment(user,dream)
-      .then(payment=>{
-        this.navCtrl.push(CheckoutPage,{dream:dream,user:user, payment:payment});
+    if(dream.contribution){
+      this.user.fbLogin()
+      .then(user=>{
+        this.loading.present();
+        this.pay.getPayment(user,dream)
+        .then(payment=>{
+          this.loading.dismiss();
+          this.navCtrl.push(CheckoutPage,{dream:dream,user:user, payment:payment});
+        });
       });
-    });
+    }else{
+      this.alerter.present();
+    }
   }
 
   getCouple(){
