@@ -1,6 +1,6 @@
 page-checkout {
   .main-input {
-    border: 2px solid #ddd !important;
+    border: $borderMedium solid $darkGrey !important;
     border-radius: 8px;
     color: black;
     margin: $rootSize 0;

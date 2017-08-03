@@ -24,8 +24,8 @@ $app-direction: ltr;
 $primaryColor: #30d0fb;
 $secondaryColor: #8142f9;
 $white: #FFF;
-$darkGrey: #999;
-$grey: #DDD;
+$darkGrey: #5b5855;
+$grey: #eff1f3;
 
 // Responsiveness
 $mobile: 768px;
@@ -38,26 +38,20 @@ $fullhd: 1392px;
 $rootSize: 8px;
 
 // Globals Variables
-$headerHeight: 350px;
+$headerHeight: 200px;
 
 $avatarSize: 22px;
 
-$cardBorderRadius: $rootSize * 2;
+$cardBorderRadius: $rootSize;
 $cardBoxShadow: 0 0 30px rgba(0,0,0,0.1);
 
 $fullBorderRadius: 30px;
 
 $gradient: linear-gradient(147deg, $primaryColor 0%, $secondaryColor 68%);
 
-
-
-
 $borderBold: 4px;
 $borderMedium: 2px;
 $border: 1px;
-
-
-
 
 // Overrides
 $toolbar-background: $white;

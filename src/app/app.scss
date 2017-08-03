@@ -28,8 +28,9 @@
 
 .col[col-3] {
   padding: 0;
+  min-width: 320px;
 
-  @media screen and (max-width: $desktop) {
+  @media screen and (max-width: $tablet) {
     width: 100%;
     min-width: 100%;
     box-sizing: border-box;
@@ -38,10 +39,10 @@
 
 // Site Globals //
 
-body {
+.content {
   padding: 0;
-  background: #e6e6e6;
-  font-family: 'Helvetica', 'Arial';
+  background: $grey;
+  font-family: 'Open Sans', 'Arial', 'sans-serif';
 }
 
 li {
@@ -66,7 +67,6 @@ ion-app.md, ion-app.ios {
   display: block;
   margin: $rootSize auto;
 }
-
 
 // Button
 .button-default {
@@ -99,7 +99,7 @@ ion-app.md, ion-app.ios {
 // Card
 .card {
   border-radius: $cardBorderRadius;
-  box-shadow: $cardBoxShadow;
+  // box-shadow: $cardBoxShadow;
   border: $borderMedium solid transparent;
   padding: $rootSize / 2;
   transition: all .2s ease-in-out;
