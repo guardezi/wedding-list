@@ -166,13 +166,12 @@ page-home {
 
   .footer {
     background-color: lighten($grey, 20%);
-    padding: $rootSize * 2;
+    padding: $rootSize * 6;
     margin-top: $rootSize;
-    color: white;
+    color: $darkGrey;
 
-    .pagseguro {
-      width: 250px;
-      margin: 20px auto 10px;
+    .fintech {
+      width: 80px;
     }
   }
 }
