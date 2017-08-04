@@ -2,13 +2,14 @@
 <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
 
 <ion-content>
-  <ion-header>
-    <ion-navbar>
-      <ion-title>
-        <span class="logo"></span>
-      </ion-title>
-    </ion-navbar>
-  </ion-header>
+  <div class="main-nav">
+    <div class="nav-inner">
+      <span class="logo">
+        <a href="/"></a>
+      </span>
+      <a href="#" class="button-inverted">Fazer minha lista</a>
+    </div>
+  </div>
 
   <header>
     <div class="color-overlay"></div>
@@ -29,7 +30,7 @@
         <ion-col col-3 col-sm *ngFor="let dream of couple.main_dreams">
           <ion-card class="highlight">
             <ion-icon class="icon-title" name="ios-cloudy-night-outline" color="primary"></ion-icon>
-            <h3 class="dream-price">R$ 2000,00</h3>
+            <h3 class="dream-price">R${{dream.price}},00</h3>
             <ion-card-content>
               <ion-card-title>
                 {{dream.title}}
@@ -45,13 +46,21 @@
               <button ion-button rounded full (click)="selectGift(dream)">Presentear</button>
               <ion-list class="avatar">
                 <ion-range min="0" max="{{dream.price}}" [(ngModel)]="dream.received" readonly disabled color="secondary">
-                  <ion-label range-right>R$ {{dream.price}}</ion-label>
+                  <ion-label range-right>R$ {{dream.received || 0}},00</ion-label>
                 </ion-range>
                 <div *ngIf="dream && dream.contribers">
                   <h6 class="alreary-donators-title">Já presentearam</h6>
                   <ion-item  *ngFor="let c of dream.contribers">
                     <ion-avatar item-start >
                       <img src="{{c.photo}}">
+                    </ion-avatar>
+                  </ion-item>
+                </div>
+                <div *ngIf="dream && !dream.contribers">
+                  <h6 class="alreary-donators-title">Seja o primeiro a presentear</h6>
+                  <ion-item>
+                    <ion-avatar item-start >
+                      <img src="">
                     </ion-avatar>
                   </ion-item>
                 </div>

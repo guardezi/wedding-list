@@ -26,7 +26,7 @@ page-home {
 
       .couple-title {
         font-family: 'Dancing Script', cursive;
-        font-size: 5em;
+        font-size: 4.5em;
         transform: rotate(-1deg);
         text-align: center;
         color: $white;
@@ -165,7 +165,7 @@ page-home {
   }
 
   .footer {
-    background-color: $secondaryColor;
+    background-color: lighten($grey, 20%);
     padding: $rootSize * 2;
     margin-top: $rootSize;
     color: white;
