@@ -27,7 +27,7 @@
     <div class="columns" hideWhen="!couple && !couple.main_dreams.length" >
       <div class="column is-4" *ngFor="let dream of couple.main_dreams">
         <ion-card class="highlight">
-          <ion-icon class="icon-title" name="ios-cloudy-night-outline" color="primary"></ion-icon>
+          <ion-icon class="icon-title" name="{{dream.icon}}" color="primary"></ion-icon>
           <h3 class="dream-price">R${{dream.price}},00</h3>
           <ion-card-content>
             <ion-card-title>
@@ -50,7 +50,7 @@
                 <h6 class="alreary-donators-title">Já presentearam</h6>
                 <ion-item  *ngFor="let c of dream.contribers">
                   <ion-avatar item-start >
-                    <img src="{{c.photo}}">
+                    <img src="{{c.user.photo}}">
                   </ion-avatar>
                 </ion-item>
               </div>
@@ -96,7 +96,7 @@
                 <h6 class="alreary-donators-title">Já presentearam</h6>
                 <ion-item  *ngFor="let c of dream.contribers">
                   <ion-avatar item-start >
-                    <img src="{{c.photo}}">
+                    <img src="{{c.user.photo}}">
                   </ion-avatar>
                 </ion-item>
               </div>

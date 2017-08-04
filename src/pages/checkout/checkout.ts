@@ -20,7 +20,9 @@ export class CheckoutPage {
 
   }
   registerContribution(){
-    // this
+    console.log('user->',this.user);
+    console.log('payment->',this.payment);
+    console.log('dream->',this.dream);
   }
 
 }

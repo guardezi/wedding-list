@@ -44,6 +44,7 @@ export class HomePage {
       this.user.fbLogin()
       .then(user=>{
         this.loading.present();
+        dream.type='main';
         this.pay.getPayment(user,dream)
         .then(payment=>{
           this.loading.dismiss();
