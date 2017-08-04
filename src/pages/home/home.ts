@@ -8,11 +8,13 @@ import { CoupleProvider } from '../../providers/couple/couple';
 import { UserProvider } from '../../providers/user/user';
 import { PayProvider } from '../../providers/pay/pay';
 
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
+
   couple=Object();
   dreams=[];
 
