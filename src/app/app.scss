@@ -63,7 +63,7 @@
         transition: opacity 0.2s ease;
 
         @media only screen and (max-width: $tablet) {
-          width: $rootSize * 18;
+          width: $rootSize * 15;
           height: $rootSize * 4;
         }
       }
@@ -120,6 +120,7 @@ ion-app.md, ion-app.ios {
 
   @media only screen and (max-width: $tablet) {
     font-size: .9em;
+    padding: $rootSize ($rootSize * 1.5);
   }
 }
 
