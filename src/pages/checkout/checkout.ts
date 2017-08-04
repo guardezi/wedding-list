@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
+import { PayProvider } from '../../providers/pay/pay';
+
 @Component({
   selector: 'page-checkout',
   templateUrl: 'checkout.html',
@@ -9,7 +11,10 @@ export class CheckoutPage {
   user;
   dream;
   payment;
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    private pay:PayProvider) {
   }
 
   ionViewDidLoad() {
@@ -17,12 +22,12 @@ export class CheckoutPage {
     this.user=this.navParams.get('user');
     this.payment=this.navParams.get('payment');
     this.payment=this.payment.response;
+    this.registerContribution();
 
   }
+
   registerContribution(){
-    console.log('user->',this.user);
-    console.log('payment->',this.payment);
-    console.log('dream->',this.dream);
+    this.pay.registerContribuition(this.user, this.dream, this.payment);
   }
 
 }

@@ -19,7 +19,15 @@ import { DeviceProvider } from '../device/device';
           title:dream.title+" por "+ user.name,
           price:Number(dream.contribution)
         }
-
+        // resolve({
+        //   response:{
+        //     "response": {
+        //       "collector_id": "264729305",
+        //       "operation_type": "regular_payment",
+        //       "price": Number(dream.contribution)
+        //     }
+        //   }
+        // });
         this.device.post(this.device.API+this.device.PAY,p)
         .then(pay=>{
           resolve(pay);
@@ -27,17 +35,24 @@ import { DeviceProvider } from '../device/device';
         .catch(e=>{
           reject(e);
         })
-      });
+          });
     }
 
     registerContribuition(user, dream, payment){
       var contribution = {
-        couple:this.device.COUPLE_ID,
+        couple:{id:this.device.COUPLE_ID},
         user:user,
         dream:dream,
         payment:payment
       }
-      this.device.post(this.device.API+this.device.CONTRIBUTION,contribution);
+      console.log('contribution, -> ',contribution,);
+      this.device.post(this.device.API+this.device.CONTRIBUTION,contribution)
+      .then(r=>{
+        console.log('resposta -> ', r);
+      })
+      .catch(e=>{
+        console.log('resposta e-> ', e);
+      })
     }
 
   }
