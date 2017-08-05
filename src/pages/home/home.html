@@ -24,49 +24,51 @@
         Nossos sonhos
       </h2>
     </div>
-    <div class="columns" hideWhen="!couple && !couple.main_dreams.length" >
-      <div class="column is-4" *ngFor="let dream of couple.main_dreams">
-        <ion-card class="highlight">
-          <ion-icon class="icon-title" name="{{dream.icon}}" color="primary"></ion-icon>
-          <h3 class="dream-price">R${{dream.price}},00</h3>
-          <ion-card-content>
-            <ion-card-title>
-              {{dream.title}}
-            </ion-card-title>
+    <ion-grid hideWhen="!couple && !couple.main_dreams.length">
+      <div class="row">
+        <ion-col col-12 col-sm-4 *ngFor="let dream of couple.main_dreams">
+          <ion-card class="highlight">
+            <ion-icon class="icon-title" name="{{dream.icon}}" color="primary"></ion-icon>
+            <h3 class="dream-price">R${{dream.price}},00</h3>
+            <ion-card-content>
+              <ion-card-title>
+                {{dream.title}}
+              </ion-card-title>
 
-            <p>{{dream.description}}</p>
+              <p>{{dream.description}}</p>
 
-            <ion-list>
-              <ion-label stacked>Presentear com:</ion-label>
-              <ion-input class="main-input" type="tel" [(ngModel)]="dream.contribution" placeholder="R$"></ion-input>
-            </ion-list>
+              <ion-list>
+                <ion-label stacked>Presentear com:</ion-label>
+                <ion-input class="main-input" type="tel" [(ngModel)]="dream.contribution" placeholder="R$"></ion-input>
+              </ion-list>
 
-            <button ion-button rounded full (click)="selectGift(dream)">Presentear</button>
-            <ion-list class="avatar">
-              <ion-range min="0" max="{{dream.price}}" [(ngModel)]="dream.received" readonly disabled color="secondary">
-                <ion-label range-right>R$ {{dream.received || 0}},00</ion-label>
-              </ion-range>
-              <div *ngIf="dream && dream.contribers">
-                <h6 class="alreary-donators-title">Já presentearam</h6>
-                <ion-item  *ngFor="let c of dream.contribers">
-                  <ion-avatar item-start >
-                    <img src="{{c.user.photo}}">
-                  </ion-avatar>
-                </ion-item>
-              </div>
-              <div *ngIf="dream && !dream.contribers">
-                <h6 class="alreary-donators-title">Seja o primeiro a presentear</h6>
-                <ion-item>
-                  <ion-avatar item-start >
-                    <img src="https://semantic-ui.com/images/avatar2/large/kristy.png">
-                  </ion-avatar>
-                </ion-item>
-              </div>
-            </ion-list>
-          </ion-card-content>
-        </ion-card>
+              <button ion-button rounded full (click)="selectGift(dream)">Presentear</button>
+              <ion-list class="avatar">
+                <ion-range min="0" max="{{dream.price}}" [(ngModel)]="dream.received" readonly disabled color="secondary">
+                  <ion-label range-right>R$ {{dream.received || 0}},00</ion-label>
+                </ion-range>
+                <div *ngIf="dream && dream.contribers">
+                  <h6 class="alreary-donators-title">Já presentearam</h6>
+                  <ion-item  *ngFor="let c of dream.contribers">
+                    <ion-avatar item-start >
+                      <img src="{{c.user.photo}}">
+                    </ion-avatar>
+                  </ion-item>
+                </div>
+                <div *ngIf="dream && !dream.contribers">
+                  <h6 class="alreary-donators-title">Seja o primeiro a presentear</h6>
+                  <ion-item>
+                    <ion-avatar item-start >
+                      <img src="https://semantic-ui.com/images/avatar2/large/kristy.png">
+                    </ion-avatar>
+                  </ion-item>
+                </div>
+              </ion-list>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
       </div>
-    </div>
+    </ion-grid>
 
     <div class="section-title">
       <h2 class="section-title-text" text-center>
@@ -115,33 +117,32 @@
         </ion-col>
       </ion-row>
     </ion-grid>
-
-
-
   </div>
 
   <footer class="footer">
-    <div class="columns">
-      <div class="column">
-        Chá de Panela por Code Brew House.
-        <br/>A better alternative.
-        <br/>São Paulo - SP.
-      </div>
-      <div class="column">
-        Redes Sociais
-        <ul>
-          <li>Ola</li>
-          <li>Ola</li>
-          <li>Ola</li>
-          <li>Ola</li>
-        </ul>
-      </div>
-      <div class="column">
-        Chá de panela
-      </div>
-      <div class="column">
-        <img class="fintech" src="https://4.bp.blogspot.com/-EtgMOm7mihI/WMIKh1kQLWI/AAAAAAAAAfk/htVHwW12ZWMLbTVMt0u_Y87GG9tCFuqMQCLcB/s1600/Mercado%2BPago.png"/>
-      </div>
-    </div>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-12 col-sm-3>
+          Chá de Panela por Code Brew House.
+          <br/>A better alternative.
+          <br/>São Paulo - SP.
+        </ion-col>
+        <ion-col col-12 col-sm-3>
+          Redes Sociais
+          <ul>
+            <li>Ola</li>
+            <li>Ola</li>
+            <li>Ola</li>
+            <li>Ola</li>
+          </ul>
+        </ion-col>
+        <ion-col col-12 col-sm-3>
+          Chá de panela
+        </ion-col>
+        <ion-col col-12 col-sm-3>
+          <img class="fintech" src="https://4.bp.blogspot.com/-EtgMOm7mihI/WMIKh1kQLWI/AAAAAAAAAfk/htVHwW12ZWMLbTVMt0u_Y87GG9tCFuqMQCLcB/s1600/Mercado%2BPago.png"/>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </footer>
 </ion-content>
