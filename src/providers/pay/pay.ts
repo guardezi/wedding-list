@@ -19,15 +19,6 @@ import { DeviceProvider } from '../device/device';
           title:dream.title+" por "+ user.name,
           price:Number(dream.contribution)
         }
-        // resolve({
-        //   response:{
-        //     "response": {
-        //       "collector_id": "264729305",
-        //       "operation_type": "regular_payment",
-        //       "price": Number(dream.contribution)
-        //     }
-        //   }
-        // });
         this.device.post(this.device.API+this.device.PAY,p)
         .then(pay=>{
           resolve(pay);
@@ -35,7 +26,7 @@ import { DeviceProvider } from '../device/device';
         .catch(e=>{
           reject(e);
         })
-          });
+      });
     }
 
     registerContribuition(user, dream, payment){
