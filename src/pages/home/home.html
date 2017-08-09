@@ -18,7 +18,12 @@
       <h2 class="couple-subtitle">Faça parte da realização do nosso sonho</h2>
     </div>
   </header>
-  <div class="ui container">
+  <div *ngIf="!couple" >
+    <h1>CARREGANDO SONHOS</h1>
+  </div>
+
+
+  <div class="ui container" *ngIf="couple">
     <div class="section-title">
       <h2 class="section-title-text" text-center>
         Nossos sonhos
