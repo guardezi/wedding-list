@@ -29,6 +29,7 @@
         <ion-col col-12 col-sm-4 *ngFor="let dream of couple.main_dreams">
           <ion-card class="highlight">
             <div class="img-card dream-one">
+              <img src="../assets/img/{{dream.img}}" />
               <div class="card-infos">
                 <ion-icon class="icon-title" name="{{dream.icon}}" color="primary"></ion-icon>
                 <h3 class="dream-price">R${{dream.price}},00</h3>
