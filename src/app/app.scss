@@ -21,7 +21,6 @@
   padding: 0;
 }
 
-
 .ui.container {
   max-width: 980px;
   margin: 0 auto;
@@ -138,62 +137,6 @@ ion-app.md, ion-app.ios {
   letter-spacing: 0.1em;
 }
 
-// Card
-.card {
-  border-radius: $cardBorderRadius;
-  border: $borderMedium solid transparent;
-  padding: $rootSize / 2;
-  transition: all .2s ease-in-out;
-  position: relative;
-
-  .icon-title {
-    font-size: 2.5em;
-    position: absolute;
-    top: $rootSize;
-    left: $rootSize * 2;
-    font-weight: bold;
-  }
-
-  .dream-price {
-    font-size: 1.8em;
-    position: absolute;
-    top: $rootSize;
-    right: $rootSize * 2;
-    font-weight: bold;
-    color: $darkGrey;
-  }
-
-  ion-label {
-    font-weight: bold;
-    color: $darkGrey;
-  }
-
-  &.highlight {
-    border: $borderMedium solid $secondaryColor;
-    box-shadow: none;
-
-    .card-title {
-      font-size: 1.4em;
-      color: $secondaryColor;
-      text-transform: capitalize;
-
-      margin-top: $rootSize * 3;
-    }
-  }
-
-  .card-title {
-    font-size: 1.4em;
-    margin-top: $rootSize * 2;
-  }
-
-  .alreary-donators-title {
-    text-transform: uppercase;
-    color: $darkGrey;
-    letter-spacing: 0.1em;
-    margin: ($rootSize * 2) 0;
-    font-size: 12px;
-  }
-}
 
 .main-list {
 
