@@ -173,10 +173,11 @@ page-home {
     padding-bottom: 0;
 
     .footer-content {
-      border-bottom: 1px solid rgba(217,226,240,0.6);
+      border-bottom: $border solid rgba(217,226,240,0.6);
 
-      .fintech {
-        width: 80px;
+      @media screen and (max-width: $mobile) {
+        display: flex;
+        align-items: center;
       }
 
       dl {
@@ -203,11 +204,6 @@ page-home {
           }
         }
       }
-    }
-
-    .footer-subcontent {
-
-
     }
   }
 }
@@ -294,7 +290,6 @@ page-home {
     }
   }
 
-
   ion-label {
     font-weight: bold;
     color: $darkGrey;
@@ -333,6 +328,16 @@ page-home {
   background-size: contain;
   width: 120px;
   height: 80px;
+  display: inline-block;
+  margin: $rootSize 0;
+}
+
+.fin-flags {
+  background-image: url("../assets/img/fin-flags.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 400px;
+  height: 55px;
   display: inline-block;
   margin: $rootSize 0;
 }
