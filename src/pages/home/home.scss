@@ -213,7 +213,6 @@ page-home {
   border-radius: $cardBorderRadius;
   transition: all .2s ease-in-out;
 
-
   .img-card {
     display: flex;
     align-items: center;
@@ -223,12 +222,13 @@ page-home {
     overflow: hidden;
     position: relative;
 
-    img {
+    .dream-img {
       width: 100%;
       height: auto;
       position: absolute;
       top: 0;
-      left: 0
+      left: 0;
+      opacity: 0.6;
     }
 
     .card-infos {
@@ -245,7 +245,7 @@ page-home {
       .dream-price {
         font-size: 1.8em;
         position: absolute;
-        top: $rootSize;
+        bottom: $rootSize;
         right: $rootSize * 2;
         font-weight: bold;
         color: $white;
@@ -258,6 +258,8 @@ page-home {
         text-align: center;
         color: $white;
         text-shadow: $titleTextShadow;
+        margin-top: 0;
+        padding: 0;
       }
 
       .dream-description {
@@ -279,7 +281,7 @@ page-home {
 
       &.primary {
         background-color: $tertiaryColor;
-        opacity: 0.7;
+        opacity: 0.6;
       }
 
       &.secondary {
