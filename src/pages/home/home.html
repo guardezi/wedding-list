@@ -89,7 +89,7 @@
         <ion-col col-12 col-sm-4 *ngFor="let dream of couple.secondary_dreams">
           <ion-card>
             <div class="img-card dream-one">
-              <img src="../assets/img/{{dream.img}}" />
+              <img src="../assets/img/{{dream.img}}" style="opacity: 0.6;"/>
               <div class="card-infos">
                 <ion-icon class="icon-title" name="{{dream.icon}}" color="primary"></ion-icon>
                 <h3 class="dream-price">R${{dream.price}},00</h3>
@@ -136,29 +136,43 @@
   </div>
 
   <footer class="footer">
-    <ion-grid>
-      <ion-row>
-        <ion-col col-12 col-sm-3>
-          Chá de Panela por Code Brew House.
-          <br/>A better alternative.
-          <br/>São Paulo - SP.
-        </ion-col>
-        <ion-col col-12 col-sm-3>
-          Redes Sociais
-          <ul>
-            <li>Ola</li>
-            <li>Ola</li>
-            <li>Ola</li>
-            <li>Ola</li>
-          </ul>
-        </ion-col>
-        <ion-col col-12 col-sm-3>
-          Chá de panela
-        </ion-col>
-        <ion-col col-12 col-sm-3>
-          <img class="fintech" src="https://4.bp.blogspot.com/-EtgMOm7mihI/WMIKh1kQLWI/AAAAAAAAAfk/htVHwW12ZWMLbTVMt0u_Y87GG9tCFuqMQCLcB/s1600/Mercado%2BPago.png"/>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
+    <div class="footer-content">
+      <ion-grid>
+        <ion-row>
+          <ion-col col-12 col-sm-4>
+            <dl>
+              <dt>Siga-nos</dt>
+              <dd><a href="fb.com/appchadepanela">Facebook</a></dd>
+              <dd><a href="fb.com/appchadepanela">Twitter</a></dd>
+              <dd><a href="fb.com/appchadepanela">Blog</a></dd>
+            </dl>
+          </ion-col>
+          <ion-col col-12 col-sm-4>
+            <dl>
+              <dt>Chá de panela aceita</dt>
+              <dd>
+                <img class="fintech" src="https://4.bp.blogspot.com/-EtgMOm7mihI/WMIKh1kQLWI/AAAAAAAAAfk/htVHwW12ZWMLbTVMt0u_Y87GG9tCFuqMQCLcB/s1600/Mercado%2BPago.png"/>
+              </dd>
+            </dl>
+          </ion-col>
+
+          <ion-col col-12 col-sm-4>
+            <dl>
+              <dd>
+                <span class="silicon-village"></span>
+              </dd>
+            </dl>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+    <!-- <div class="footer-subcontent">
+      <ion-grid>
+        <ion-row>
+          <ion-col col-12>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div> -->
   </footer>
 </ion-content>

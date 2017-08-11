@@ -39,6 +39,8 @@ $fullhd: 1392px;
 $rootSize: 8px;
 
 // Globals Variables
+$pageBackground: #f7f9fc;
+
 $headerHeight: 200px;
 
 $avatarSize: 22px;
@@ -54,6 +56,7 @@ $gradient: linear-gradient(147deg, $primaryColor 0%, $secondaryColor 68%);
 $borderBold: 4px;
 $borderMedium: 2px;
 $border: 1px;
+
 
 // Overrides
 $toolbar-background: $white;
