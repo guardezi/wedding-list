@@ -3,6 +3,9 @@ import { Http, Headers, RequestOptions } from '@angular/http';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/toPromise';
 
+
+
+
 @Injectable()
 export class DeviceProvider {
 
@@ -33,6 +36,7 @@ export class DeviceProvider {
   put(url,object){
 
   }
+
 
   // API:string='http://localhost:5000/chadepanela-7e6d3/us-central1/';
   API:string='https://us-central1-chadepanela-7e6d3.cloudfunctions.net/';

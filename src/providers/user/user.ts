@@ -29,6 +29,19 @@ declare var FB;
       });
     }
 
+    isFirstTime(){
+      return new Promise((resolve, reject)=> {
+        this.storage.get('hasSeenTutorial')
+        .then((hasSeenTutorial) => {
+          if (hasSeenTutorial) {
+            resolve(false);
+          } else {
+            // this.storage.set('hasSeenTutorial','true');
+            resolve(true);
+          }
+        });
+      });
+    }
 
     fbLogin(){
       return new Promise((resolve, reject)=> {
