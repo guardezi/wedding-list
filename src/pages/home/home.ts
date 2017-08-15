@@ -75,7 +75,6 @@ export class HomePage {
   getCouple(){
     this._couple.getCouple()
     .then(data=>{
-      console.log("data from server-> ",data);
       this.couple = data;
     })
   }

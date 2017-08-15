@@ -24,9 +24,7 @@ declare var FB;
       });
       FB.AppEvents.logPageView();
 
-      FB.getLoginStatus(function(response) {
-        console.log('facebook status',response);
-      });
+      FB.getLoginStatus(function(response) { });
     }
 
     isFirstTime(){

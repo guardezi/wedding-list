@@ -18,8 +18,6 @@ import { NavController, NavParams } from 'ionic-angular';
    constructor(public navCtrl: NavController, public navParams: NavParams) {
    }
 
-   ionViewDidLoad() {
-     console.log('ionViewDidLoad TourPage');
-   }
+   ionViewDidLoad() {   }
 
  }

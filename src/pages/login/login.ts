@@ -18,7 +18,6 @@ import { NavController, NavParams } from 'ionic-angular';
    }
 
    ionViewDidLoad() {
-     console.log('ionViewDidLoad LoginPage');
    }
 
 

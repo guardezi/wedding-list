@@ -9,9 +9,7 @@ import 'rxjs/add/operator/toPromise';
 @Injectable()
 export class DeviceProvider {
 
-  constructor(public http: Http) {
-    console.log('Hello DeviceProvider Provider');
-  }
+  constructor(public http: Http) { }
 
   post(url, object){
     return new Promise((resolve, reject)=> {
