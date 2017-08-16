@@ -24,11 +24,22 @@ declare var FB;
       });
       FB.AppEvents.logPageView();
 
-      FB.getLoginStatus(function(response) {
-        console.log('facebook status',response);
-      });
+      FB.getLoginStatus(function(response) { });
     }
 
+    isFirstTime(){
+      return new Promise((resolve, reject)=> {
+        this.storage.get('hasSeenTutorial')
+        .then((hasSeenTutorial) => {
+          if (hasSeenTutorial) {
+            resolve(false);
+          } else {
+            // this.storage.set('hasSeenTutorial','true');
+            resolve(true);
+          }
+        });
+      });
+    }
 
     fbLogin(){
       return new Promise((resolve, reject)=> {

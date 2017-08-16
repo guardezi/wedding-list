@@ -21,13 +21,7 @@ export class CheckoutPage {
     this.dream=this.navParams.get('dream');
     this.user=this.navParams.get('user');
     this.payment=this.navParams.get('payment');
-    this.payment=this.payment.response;
-    this.registerContribution();
-
-  }
-
-  registerContribution(){
-    this.pay.registerContribuition(this.user, this.dream, this.payment);
+    this.payment=this.payment.payment;
   }
 
 }

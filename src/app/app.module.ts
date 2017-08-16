@@ -10,18 +10,20 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { CheckoutPage } from '../pages/checkout/checkout';
+import { TourPage } from '../pages/tour/tour';
+
 import { DeviceProvider } from '../providers/device/device';
 import { CoupleProvider } from '../providers/couple/couple';
 import { UserProvider } from '../providers/user/user';
 import { PayProvider } from '../providers/pay/pay';
-
 
 @NgModule({
   declarations: [
   MyApp,
   HomePage,
   LoginPage,
-  CheckoutPage
+  CheckoutPage,
+  TourPage
   ],
   imports: [
   HttpModule,
@@ -34,7 +36,8 @@ import { PayProvider } from '../providers/pay/pay';
   MyApp,
   HomePage,
   LoginPage,
-  CheckoutPage
+  CheckoutPage,
+  TourPage
   ],
   providers: [
   StatusBar,
@@ -43,7 +46,7 @@ import { PayProvider } from '../providers/pay/pay';
   DeviceProvider,
   CoupleProvider,
   UserProvider,
-    PayProvider
+  PayProvider
   ]
 })
 export class AppModule {}

@@ -3,10 +3,12 @@ import { NavController,NavParams, Slides,ModalController,LoadingController,Alert
 
 import { LoginPage } from '../login/login';
 import { CheckoutPage } from '../checkout/checkout';
+import { TourPage } from '../tour/tour';
 
 import { CoupleProvider } from '../../providers/couple/couple';
 import { UserProvider } from '../../providers/user/user';
 import { PayProvider } from '../../providers/pay/pay';
+
 
 
 @Component({
@@ -23,8 +25,16 @@ export class HomePage {
     private alert:AlertController,
     private _couple:CoupleProvider,
     private user:UserProvider,
+    private modalCtrl: ModalController,
     private pay:PayProvider) {
     this.getCouple();
+    this.user.isFirstTime()
+    .then(firstTime=>{
+      if (firstTime) {
+        let notificationModal = this.modalCtrl.create(TourPage);
+        notificationModal.present();
+      }
+    })
   }
 
   loading=this.loader.create({
@@ -65,8 +75,8 @@ export class HomePage {
   getCouple(){
     this._couple.getCouple()
     .then(data=>{
-      console.log("data from server-> ",data);
       this.couple = data;
     })
   }
+
 }
