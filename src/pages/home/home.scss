@@ -212,62 +212,48 @@ page-home {
 .card {
   border-radius: $cardBorderRadius;
   transition: all .2s ease-in-out;
+  position: relative;
 
   .img-card {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 100%;
-    height: 150px;
     overflow: hidden;
-    position: relative;
 
     .dream-img {
       width: 100%;
-      height: auto;
-      position: absolute;
-      top: 0;
-      left: 0;
-      opacity: 0.6;
+      max-height: 120px;
     }
 
     .card-infos {
-      z-index: 10;
+      padding: $rootSize + 5px ($rootSize * 2);
 
       .icon-title {
         font-size: 2.5em;
-        position: absolute;
         top: $rootSize;
         left: $rootSize * 2;
         font-weight: bold;
       }
 
       .dream-price {
-        font-size: 1.8em;
-        position: absolute;
-        bottom: $rootSize;
-        right: $rootSize * 2;
+        font-size: 1.3em;
         font-weight: bold;
         color: $white;
-        text-shadow: $titleTextShadow;
+        background: $secondaryColor;
+        position: absolute;
+        top: $rootSize * 13;
+        right: $rootSize * 2;
+        padding: ($rootSize / 2) $rootSize;
+        border-radius: $fullBorderRadius;
       }
 
       .dream-title {
-        display: block;
         font-weight: bold;
-        text-align: center;
-        color: $white;
-        text-shadow: $titleTextShadow;
+        color: $darkGrey;
         margin-top: 0;
         padding: 0;
       }
 
       .dream-description {
-        display: block;
-        font-weight: bold;
-        text-align: center;
-        color: $white;
-        text-shadow: $titleTextShadow;
+        color: $darkGrey;
       }
     }
 
@@ -322,8 +308,13 @@ page-home {
     margin: ($rootSize * 2) 0;
     font-size: 12px;
   }
+
+  .card-content {
+    padding-top: 0;
+  }
 }
 
+// footer
 .silicon-village {
   background-image: url("../assets/img/silicon-village.png");
   background-repeat: no-repeat;

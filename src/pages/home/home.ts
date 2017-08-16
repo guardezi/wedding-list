@@ -42,7 +42,7 @@ export class HomePage {
     content: `
     <div class="custom-spinner-container">
     <div class="custom-spinner-box"></div>
-    Carregando Aguarde...
+    Carregando...
     </div>`
   });
   alerter = this.alert.create({
