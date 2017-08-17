@@ -214,13 +214,19 @@ page-home {
   transition: all .2s ease-in-out;
   position: relative;
 
+  @media only screen and (max-width: $tablet) {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
   .img-card {
     width: 100%;
     overflow: hidden;
+    height: 160px;
 
     .dream-img {
       width: 100%;
-      max-height: 120px;
+      max-height: auto;
     }
 
     .card-infos {
@@ -243,6 +249,11 @@ page-home {
         right: $rootSize * 2;
         padding: ($rootSize / 2) $rootSize;
         border-radius: $fullBorderRadius;
+
+        @media only screen and (min-width: $tablet) and (max-width: $desktop) {
+          top: $rootSize * 11;
+          font-size: 1.2em;
+        }
       }
 
       .dream-title {
@@ -284,7 +295,7 @@ page-home {
   }
 
   &.highlight {
-    border: $borderMedium solid $secondaryColor;
+    border: $border solid $secondaryColor;
     box-shadow: none;
 
     .card-title {
