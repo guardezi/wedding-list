@@ -139,7 +139,6 @@ ion-app.md, ion-app.ios {
 
 
 .main-list {
-
   .options-content {
     display: flex;
     align-items: center;
@@ -151,4 +150,18 @@ ion-app.md, ion-app.ios {
       padding: $rootSize * 3;
     }
   }
+}
+
+.text-input-ios {
+  width: 100% !important;
+}
+
+.text-input {
+  width: 100%;
+}
+
+.label-ios + ion-input .text-input,
+.label-ios + ion-textarea .text-input,
+.label-ios + .input + .cloned-input {
+  width: calc(100% - 10px) !important;
 }

@@ -251,7 +251,7 @@ page-home {
         border-radius: $fullBorderRadius;
 
         @media only screen and (min-width: $tablet) and (max-width: $desktop) {
-          top: $rootSize * 11;
+          top: $rootSize * 10;
           font-size: 1.2em;
         }
       }
