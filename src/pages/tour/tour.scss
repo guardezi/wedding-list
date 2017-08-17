@@ -2,6 +2,10 @@ page-tour {
   .main-slides {
     padding: $rootSize * 5;
 
+    strong {
+      color: #f97f95;
+    }
+
     .header-slides {
       font-size: 24px;
     }
