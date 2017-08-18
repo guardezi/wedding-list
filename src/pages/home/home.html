@@ -32,7 +32,10 @@
     <ion-grid hideWhen="!couple && !couple.main_dreams.length">
       <div class="row">
         <ion-col col-12 col-sm-4 *ngFor="let dream of couple.main_dreams">
-          <ion-card class="highlight">
+          <ion-card>
+            <span class="dream-icon" title="Nossos sonhos">
+              <ion-icon ios="ios-star" md="md-star"></ion-icon>
+            </span>
             <div class="img-card dream-one">
               <img class="dream-img" src="../assets/img/{{dream.img}}" />
               <div class="card-infos">
