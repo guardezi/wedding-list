@@ -85,7 +85,7 @@ page-home {
         height: 1px;
         z-index: -2;
         top: 48%;
-        border-bottom: 1px dashed lighten($darkGrey, 40%);
+        border-bottom: 2px dashed lighten($darkGrey, 50%);
       }
 
       &::after {
@@ -266,7 +266,7 @@ page-home {
         border-radius: $fullBorderRadius;
 
         @media only screen and (min-width: $tablet) and (max-width: $desktop) {
-          top: $rootSize * 10;
+          top: $rootSize * 9;
           font-size: 1.2em;
         }
       }
