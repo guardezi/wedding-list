@@ -32,7 +32,7 @@ page-home {
 
       .couple-title {
         font-family: 'Dancing Script', cursive;
-        font-size: 4.2em;
+        font-size: 4.4em;
         transform: rotate(-1deg);
         text-align: center;
         color: $white;
@@ -43,14 +43,13 @@ page-home {
       }
 
       .couple-subtitle {
-        font-size: 1.6em;
+        font-size: 1.4em;
         display: block;
-        font-weight: 700;
+        font-weight: 600;
         color: $white;
 
         @media screen and (max-width: $desktop) {
           font-size: 1em;
-          font-weight: 600;
         }
       }
     }
@@ -328,7 +327,7 @@ page-home {
     margin-top: $rootSize * 2;
   }
 
-  .alreary-donators-title {
+  .donators-title {
     text-transform: uppercase;
     color: $darkGrey;
     letter-spacing: 0.1em;

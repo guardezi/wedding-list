@@ -58,7 +58,7 @@
                   <ion-label range-right>R$ {{dream.received || 0}},00</ion-label>
                 </ion-range>
                 <div *ngIf="dream && dream.contribers">
-                  <h6 class="alreary-donators-title">Já presentearam</h6>
+                  <h6 class="donators-title">Já presentearam</h6>
                   <ion-item  *ngFor="let c of dream.contribers">
                     <ion-avatar item-start>
                       <img src="{{c.user.photo}}" title="{{c.user.name}}">
@@ -66,7 +66,7 @@
                   </ion-item>
                 </div>
                 <div *ngIf="dream && !dream.contribers">
-                  <h6 class="alreary-donators-title">Seja o primeiro a presentear</h6>
+                  <h6 class="donators-title">Seja o primeiro a presentear</h6>
                   <ion-item>
                     <ion-avatar item-start >
                       <img src="https://semantic-ui.com/images/avatar2/large/kristy.png">
@@ -111,7 +111,7 @@
                   <ion-label range-right>R$ {{dream.received || 0}},00</ion-label>
                 </ion-range>
                 <div *ngIf="dream && dream.contribers">
-                  <h6 class="alreary-donators-title">Já presentearam</h6>
+                  <h6 class="donators-title">Já presentearam</h6>
                   <ion-item  *ngFor="let c of dream.contribers">
                     <ion-avatar item-start >
                       <img src="{{c.user.photo}}">
@@ -119,7 +119,7 @@
                   </ion-item>
                 </div>
                 <div *ngIf="dream && !dream.contribers">
-                  <h6 class="alreary-donators-title">Seja o primeiro a presentear</h6>
+                  <h6 class="donators-title">Seja o primeiro a presentear</h6>
                   <ion-item>
                     <ion-avatar item-start >
                       <img src="https://semantic-ui.com/images/avatar2/large/kristy.png">
