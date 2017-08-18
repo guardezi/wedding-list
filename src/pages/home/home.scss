@@ -94,8 +94,8 @@ page-home {
         right: 0;
         background: $pageBackground;
         content: "";
-        height: $rootSize;
-        top: 54%;
+        height: $rootSize * 2;
+        top: 28%;
         width: $rootSize * 20;
         z-index: -1;
         margin: 0 auto;
