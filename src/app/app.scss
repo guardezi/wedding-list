@@ -60,11 +60,6 @@
         background-size: contain;
         margin: ($rootSize / 2) $rootSize;
 
-        -webkit-transition: opacity 0.2s ease;
-        -moz-transition: opacity 0.2s ease;
-        -o-transition: opacity 0.2s ease;
-        transition: opacity 0.2s ease;
-
         @media only screen and (max-width: $tablet) {
           width: $rootSize * 15;
           height: $rootSize * 4;
@@ -158,18 +153,4 @@ ion-app.md, ion-app.ios {
       padding: $rootSize * 3;
     }
   }
-}
-
-.text-input-ios {
-  width: 100% !important;
-}
-
-.text-input {
-  width: 100%;
-}
-
-.label-ios + ion-input .text-input,
-.label-ios + ion-textarea .text-input,
-.label-ios + .input + .cloned-input {
-  width: calc(100% - 10px) !important;
 }
