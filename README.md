@@ -36,4 +36,9 @@ npm run ionic:build --prod
 ```
 aws s3 sync . s3://chadepane.la
 ```
+## create aws fron invalidation
+```
+aws cloudfront create-invalidation --distribution-id EEU9FCVXFI13Q --paths /*
+```
+
 

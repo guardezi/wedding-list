@@ -52,7 +52,7 @@
                 <ion-input class="main-input" type="tel" [(ngModel)]="dream.contribution" placeholder="R$"></ion-input>
               </ion-list>
 
-              <button ion-button rounded full (click)="selectGift(dream)">Presentear</button>
+              <button ion-button rounded full (click)="selectGift(dream,'main')">Presentear</button>
               <ion-list class="avatar">
                 <ion-range min="0" max="{{dream.price}}" [(ngModel)]="dream.received" readonly disabled color="secondary">
                   <ion-label range-right>R$ {{dream.received || 0}},00</ion-label>
@@ -105,7 +105,7 @@
                 <ion-input class="main-input" type="tel" [(ngModel)]="dream.contribution" placeholder="R$"></ion-input>
               </ion-list>
 
-              <button ion-button rounded full (click)="selectGift(dream)">Presentear</button>
+              <button ion-button rounded full (click)="selectGift(dream,'secondary')">Presentear</button>
               <ion-list class="avatar">
                 <ion-range min="0" max="{{dream.price}}" [(ngModel)]="dream.received" readonly disabled color="secondary">
                   <ion-label range-right>R$ {{dream.received || 0}},00</ion-label>

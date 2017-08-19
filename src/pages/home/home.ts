@@ -51,12 +51,12 @@ export class HomePage {
     buttons: ['Ok']
   });
 
-  selectGift(dream){
+  selectGift(dream, type){
     if(dream.contribution){
       this.user.fbLogin()
       .then(user=>{
         this.loading.present();
-        dream.type='main';
+        dream.type=type;
         this.pay.getPayment(user,dream)
         .then(payment=>{
           this.loading.dismiss();
